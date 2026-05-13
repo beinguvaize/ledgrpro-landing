@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans — StockMate</title>
+  <meta name="description" content="Frictionless, honest plans for Indian commerce. Choose Starter, Growth, or Pro with simple annual savings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .market-compare {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .market-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      background: #f8fafc;
+      text-align: center;
+    }
+    .market-card h4 { font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 8px;}
+    .market-price { font-size: 1.25rem; font-weight: 700; color: var(--text-muted); margin-bottom: 12px;}
+    .market-constraint { font-size: 0.85rem; color: #e11d48; font-weight: 600; background: #fff1f2; display: inline-block; padding: 2px 12px; border-radius: 20px;}
+  </style>
+</head>
+<body class="subpage-body">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="./index.html" class="navbar-logo">
+        <img src="logo.png" alt="LedgrPro Logo" class="app-logo">
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="./features.html">Features</a>
+        <a href="./index.html#how-it-works">How It Works</a>
+        <a href="./pricing.html" class="active" style="color: var(--primary); font-weight: 700;">Pricing</a>
+        <a href="./index.html#testimonials">Testimonials</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="./index.html#demo" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text);">Book Demo</a>
+        <a href="#" class="btn btn-secondary">Log In</a>
+        <a href="./pricing.html" class="btn btn-primary">Start Free Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="subpage-hero">
+    <div class="container">
+      <div class="subpage-hero-content">
+        <h1>Simple, Honest <span class="gradient-text">Pricing</span>.</h1>
+        <p>Start free for 30 days — no credit card required. Fully-featured, cloud-native POS designed to grow as you scale your operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING SECTION ========== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      
+      <!-- Billing Toggle -->
+      <div class="pricing-toggle-wrapper">
+        <span class="toggle-label" id="monthlyLabel" style="color: var(--text-muted); font-weight: 400;">Monthly</span>
+        <label class="switch">
+          <input type="checkbox" id="billingToggle" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="toggle-label" id="yearlyLabel" style="color: var(--text); font-weight: 600;">Annually <span class="toggle-badge">🔥 Save up to 23%</span></span>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- Starter -->
+        <div class="pricing-card" id="planStarter">
+          <div class="plan-name">Starter</div>
+          <div class="price">₹<span class="price-val" data-monthly="249" data-yearly="199">199</span><span class="price-period">/mo</span></div>
+          <div class="period">Billed annually</div>
+          <div class="trial-badge">Perfect for single retail shops</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Dashboard & Inventory</li>
+            <li><span class="check">✓</span> Sales / POS (Mobile Browser)</li>
+            <li><span class="check">✓</span> Expenses & Client Ledger</li>
+            <li><span class="check">✓</span> Day Book & GST Invoices</li>
+            <li><span class="check">✓</span> 2 Users • 500 Invoices/mo</li>
+          </ul>
+          <a href="#" class="btn btn-secondary" id="starterCta">Start 30-Day Free Trial</a>
+        </div>
+
+        <!-- Growth -->
+        <div class="pricing-card popular" id="planPro">
+          <div class="plan-name">Growth</div>
+          <div class="price">₹<span class="price-val" data-monthly="599" data-yearly="499">499</span><span class="price-period">/mo</span></div>
+          <div class="period">Billed annually</div>
+          <div class="trial-badge" style="background:var(--primary); color:white;">🚀 Top Choice: Wholesalers & GST</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> <strong>All Starter Features +</strong></li>
+            <li><span class="check">✓</span> <strong>Multi-Location Inventory</strong></li>
+            <li><span class="check">✓</span> Purchases & Supplier Ledger</li>
+            <li><span class="check">✓</span> Vehicles & Delivery Routes</li>
+            <li><span class="check">✓</span> GSTR Export & WAC Costing</li>
+            <li><span class="check">✓</span> Max 10 Users • Unlimited Invoices</li>
+          </ul>
+          <a href="#" class="btn btn-primary" id="proCta">Start 30-Day Free Trial</a>
+        </div>
+
+        <!-- Pro -->
+        <div class="pricing-card" id="planEnterprise">
+          <div class="plan-name">Pro</div>
+          <div class="price">₹<span class="price-val" data-monthly="1299" data-yearly="999">999</span><span class="price-period">/mo</span></div>
+          <div class="period">Billed annually</div>
+          <div class="trial-badge" style="background:#0f172a; color:white;">🏢 Best for Multi-Branch Teams</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> <strong>All Growth Features +</strong></li>
+            <li><span class="check">✓</span> User Roles & Management</li>
+            <li><span class="check">✓</span> Advanced Security Settings</li>
+            <li><span class="check">✓</span> Immutable Enterprise Audit Log</li>
+            <li><span class="check">✓</span> Open API Access & White Labeling</li>
+            <li><span class="check">✓</span> Unlimited Users & Invoices</li>
+          </ul>
+          <a href="#" class="btn btn-secondary" id="enterpriseCta">Start 30-Day Free Trial</a>
+        </div>
+
+      </div>
+
+      <!-- Detailed Comparison Disclaimers -->
+      <div style="text-align: center; margin: 60px 0 20px;">
+        <h3 style="font-size: 1.6rem; font-weight: 800;">How We Compare to the Market</h3>
+        <p style="color: var(--text-muted);">StockMate delivers Cloud + Mobile capabilities that legacy tools charge heavily for.</p>
+      </div>
+
+      <div class="market-compare">
+        
+        <div class="market-card">
+          <h4>myBillBook</h4>
+          <div class="market-price">~₹399/yr</div>
+          <div class="market-constraint">⛔ Very Basic Features</div>
+        </div>
+
+        <div class="market-card">
+          <h4>Vyapar</h4>
+          <div class="market-price">~₹4,353/yr</div>
+          <div class="market-constraint">⛔ Desktop-Only Limits</div>
+        </div>
+
+        <div class="market-card">
+          <h4>Tally Prime</h4>
+          <div class="market-price">~₹22,500 one-time</div>
+          <div class="market-constraint">⛔ Zero Real-Time Cloud POS</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html" style="display: inline-block; margin-bottom: 20px;">
+            <img src="logo.png" alt="LedgrPro Logo" style="height: 52px; mix-blend-mode: multiply; opacity: 0.9;">
+          </a>
+          <p>The modern inventory management platform built for businesses that want to grow smarter, not harder.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="./features.html">Features</a>
+          <a href="./pricing.html">Pricing</a>
+          <a href="./integrations.html">Integrations</a>
+          <a href="./changelog.html">Changelog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="./about.html">About</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./careers.html">Careers</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./security.html">Security</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LedgrPro Platforms Ltd (StockMate). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== INTERACTION JS ========== -->
+  <script>
+    const billingToggle = document.getElementById('billingToggle');
+    const priceVals = document.querySelectorAll('.price-val');
+    const monthlyLabel = document.getElementById('monthlyLabel');
+    const yearlyLabel = document.getElementById('yearlyLabel');
+    const periodLabels = document.querySelectorAll('.period');
+
+    if(billingToggle) {
+      billingToggle.addEventListener('change', function() {
+        const isYearly = this.checked;
+        
+        priceVals.forEach(val => {
+          const newVal = isYearly ? val.getAttribute('data-yearly') : val.getAttribute('data-monthly');
+          val.style.opacity = 0;
+          setTimeout(() => {
+            val.innerText = newVal;
+            val.style.opacity = 1;
+          }, 150);
+        });
+
+        periodLabels.forEach(label => {
+          label.innerText = isYearly ? "Billed annually" : "Billed monthly";
+        });
+
+        if(isYearly) {
+          monthlyLabel.style.color = "var(--text-muted)";
+          monthlyLabel.style.fontWeight = "400";
+          yearlyLabel.style.color = "var(--text)";
+          yearlyLabel.style.fontWeight = "600";
+        } else {
+          monthlyLabel.style.color = "var(--text)";
+          monthlyLabel.style.fontWeight = "600";
+          yearlyLabel.style.color = "var(--text-muted)";
+          yearlyLabel.style.fontWeight = "400";
+        }
+      });
+      
+      priceVals.forEach(v => v.style.transition = "opacity 0.15s ease");
+    }
+  </script>
+
+</body>
+</html>
