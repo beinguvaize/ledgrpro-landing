@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrations — LedgrPro</title>
+  <meta name="description" content="Connect your inventory with Razorpay, Tally, WhatsApp, and government e-invoicing APIs seamlessly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .int-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .int-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      background: var(--surface);
+      transition: var(--transition);
+      text-align: center;
+    }
+    .int-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card);
+    }
+    .int-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      background: #f1f5f9;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+    .int-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .int-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body class="subpage-body">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="./index.html" class="navbar-logo">
+        <img src="logo.png" alt="LedgrPro Logo" class="app-logo">
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="./index.html#features">Features</a>
+        <a href="./index.html#how-it-works">How It Works</a>
+        <a href="./index.html#pricing">Pricing</a>
+        <a href="./index.html#testimonials">Testimonials</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="./index.html#demo" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text);">Book Demo</a>
+        <a href="#" class="btn btn-secondary">Log In</a>
+        <a href="./index.html#pricing" class="btn btn-primary">Start Free Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="subpage-hero">
+    <div class="container">
+      <div class="subpage-hero-content">
+        <h1>Connect & <span class="gradient-text">Automate</span>.</h1>
+        <p>LedgrPro unifies your current operational stack with direct native pipelines—eliminating manual exports and double entries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTENT ========== -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 40px;">
+        <span class="section-label">🧩 Hub Ecosystem</span>
+        <h2 class="section-title">Native Connections</h2>
+      </div>
+
+      <div class="int-grid">
+        <!-- Tally -->
+        <div class="int-card">
+          <div class="int-icon">📊</div>
+          <h3>TallyPrime Sync</h3>
+          <p>Export day books and vouchers directly to Tally formats for your Chartered Accountant.</p>
+        </div>
+        <!-- Razorpay -->
+        <div class="int-card">
+          <div class="int-icon">💳</div>
+          <h3>Razorpay Gateway</h3>
+          <p>Attach payment links directly onto digital invoices and reconcile collections instantly.</p>
+        </div>
+        <!-- WhatsApp -->
+        <div class="int-card">
+          <div class="int-icon">💬</div>
+          <h3>WhatsApp API</h3>
+          <p>Auto-send invoices, order estimates, and low-stock alerts straight to clients.</p>
+        </div>
+        <!-- Govt e-invoice -->
+        <div class="int-card">
+          <div class="int-icon">🇮🇳</div>
+          <h3>NIC e-Invoicing</h3>
+          <p>One-click generation of mandatory Govt IRN and E-Way bills directly in LedgrPro.</p>
+        </div>
+        <!-- Excel -->
+        <div class="int-card">
+          <div class="int-icon">📈</div>
+          <h3>Excel / CSV Universal</h3>
+          <p>Robust import/export engine to shift thousands of inventory items in seconds.</p>
+        </div>
+        <!-- Slack -->
+        <div class="int-card">
+          <div class="int-icon">🔔</div>
+          <h3>Slack & Teams</h3>
+          <p>Trigger internal channels on dispatch success, large orders, or inventory alerts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html" style="display: inline-block; margin-bottom: 20px;">
+            <img src="logo.png" alt="LedgrPro Logo" style="height: 52px; mix-blend-mode: multiply; opacity: 0.9;">
+          </a>
+          <p>The modern inventory management platform built for businesses that want to grow smarter, not harder.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="./index.html#features">Features</a>
+          <a href="./index.html#pricing">Pricing</a>
+          <a href="./integrations.html">Integrations</a>
+          <a href="./changelog.html">Changelog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="./about.html">About</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./careers.html">Careers</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./security.html">Security</a>
+        </div>
+      </div>
+      <div class="footer-locations" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 30px;">
+        <div class="location">
+          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">India</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Poyisha Rd<br>North Edappally<br>Ernakulam</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">United Arab Emirates</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Marina Heights<br>Dubai Marina<br>Dubai</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">Singapore</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Collyer Quay<br>The Arcade<br>Singapore</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LedgrPro Platforms Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

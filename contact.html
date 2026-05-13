@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — LedgrPro</title>
+  <meta name="description" content="Get in touch with our support and sales units across India, Singapore, and Dubai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage-body">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="./index.html" class="navbar-logo">
+        <img src="logo.png" alt="LedgrPro Logo" class="app-logo">
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="./index.html#features">Features</a>
+        <a href="./index.html#how-it-works">How It Works</a>
+        <a href="./index.html#pricing">Pricing</a>
+        <a href="./index.html#testimonials">Testimonials</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="./index.html#demo" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text);">Book Demo</a>
+        <a href="#" class="btn btn-secondary">Log In</a>
+        <a href="./index.html#pricing" class="btn btn-primary">Start Free Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="subpage-hero">
+    <div class="container">
+      <div class="subpage-hero-content">
+        <h1>Let's <span class="gradient-text">Connect.</span></h1>
+        <p>Have an operational question? Looking for Enterprise deployment services? Our support network covers 24/7 chat and global offices.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-form-card">
+          <h2 style="font-weight: 800; margin-bottom: 24px;">Send a Message</h2>
+          <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you! Your request was received successfully.');">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Amit Patel" required>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="amit@business.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Reason for Reaching Out</label>
+              <select required>
+                <option value="">Select a topic...</option>
+                <option value="sales">Enterprise / Custom Demo Query</option>
+                <option value="support">Technical Account Support</option>
+                <option value="partnership">Integration Partnership</option>
+                <option value="other">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message / Details</label>
+              <textarea rows="5" placeholder="Briefly tell us how we can help you..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">Send Message →</button>
+          </form>
+        </div>
+
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 24px;">Direct Channels</h3>
+          <div style="margin-bottom: 32px;">
+            <p style="font-weight: 700; color: var(--text); margin-bottom: 4px;">General Support</p>
+            <p style="color: var(--primary); font-weight: 600;">support@ledgrpro.com</p>
+          </div>
+          <div style="margin-bottom: 32px;">
+            <p style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Sales / Demos</p>
+            <p style="color: var(--primary); font-weight: 600;">growth@ledgrpro.com</p>
+          </div>
+          <div style="margin-bottom: 32px;">
+            <p style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Press / Partnerships</p>
+            <p style="color: var(--primary); font-weight: 600;">partners@ledgrpro.com</p>
+          </div>
+          
+          <div style="border-top: 1px solid var(--border); padding-top: 32px; margin-top: 16px;">
+            <p style="font-weight: 700; color: var(--text); margin-bottom: 12px;">Global SLA Guarantees</p>
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">All professional support requests are triaged and responded to in under **2 hours** during regular market hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html" style="display: inline-block; margin-bottom: 20px;">
+            <img src="logo.png" alt="LedgrPro Logo" style="height: 52px; mix-blend-mode: multiply; opacity: 0.9;">
+          </a>
+          <p>The modern inventory management platform built for businesses that want to grow smarter, not harder.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="./index.html#features">Features</a>
+          <a href="./index.html#pricing">Pricing</a>
+          <a href="./integrations.html">Integrations</a>
+          <a href="./changelog.html">Changelog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="./about.html">About</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./careers.html">Careers</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./security.html">Security</a>
+        </div>
+      </div>
+      <div class="footer-locations" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 30px;">
+        <div class="location">
+          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">India</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Poyisha Rd<br>North Edappally<br>Ernakulam</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">United Arab Emirates</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Marina Heights<br>Dubai Marina<br>Dubai</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">Singapore</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Collyer Quay<br>The Arcade<br>Singapore</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LedgrPro Platforms Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
