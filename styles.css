@@ -865,3 +865,113 @@ input:checked + .slider:before { transform: translateX(24px); }
   .pricing-card.popular { order: -1; }
   .cta-section { padding: 60px 24px; }
 }
+
+/* ===== PRICING FEATURE COMPARISON MATRIX ===== */
+.comparison-container {
+  margin-top: 80px;
+}
+
+.comparison-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.comparison-title h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.comparison-title p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.comparison-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  scrollbar-width: thin;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  text-align: center;
+  min-width: 750px;
+}
+
+.comparison-table th, .comparison-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-table th {
+  background: #f8fafc;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  padding: 24px;
+}
+
+.comparison-table td:first-child, .comparison-table th:first-child {
+  text-align: left;
+  width: 35%;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.comparison-table tr.category-row td {
+  background: rgba(15, 23, 42, 0.03);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-align: left !important;
+  padding: 12px 24px;
+}
+
+.comparison-table td {
+  color: var(--text-muted);
+}
+
+.comparison-table .col-popular {
+  background: rgba(11, 128, 241, 0.02);
+}
+
+.comparison-table th.col-popular {
+  background: rgba(11, 128, 241, 0.06);
+  color: var(--primary);
+  position: relative;
+}
+
+.comparison-table .check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green);
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.comparison-table .cross-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.comparison-table tbody tr:hover td {
+  background: rgba(15, 23, 42, 0.01);
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}

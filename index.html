@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LedgrPro — Inventory & Business Intelligence Platform</title>
-  <meta name="description" content="LedgrPro is the modern inventory management and business intelligence platform. Track stock, analyze margins, and grow smarter. Start your free 2-month trial today.">
+  <meta name="description" content="LedgrPro is the modern inventory management and business intelligence platform. Track stock, analyze margins, and grow smarter. Start your free 30-day trial today.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -54,7 +54,7 @@
           </ul>
 
           <div class="hero-actions">
-            <a href="#pricing" class="btn btn-primary btn-large">Start Free 14-Day Trial</a>
+            <a href="#pricing" class="btn btn-primary btn-large">Start Free 30-Day Trial</a>
             <a href="#demo" class="btn btn-secondary btn-large">See It In Action →</a>
           </div>
           
@@ -505,70 +505,249 @@
         <div class="section-label">💎 Pricing</div>
         <h2 class="section-title">Simple, Transparent<br><span class="gradient-text">Pricing</span></h2>
         
-        <!-- Annual Toggle -->
+        <!-- Annual Toggle (Default to Annual) -->
         <div class="price-toggle-container" style="display: flex; align-items: center; justify-content: center; gap: 15px; margin: 30px 0;">
-          <span id="monthlyLabel" style="font-weight: 600; color: var(--text);">Monthly</span>
+          <span id="monthlyLabel" style="color: var(--text-muted); font-weight: 400;">Monthly</span>
           <label class="switch">
-            <input type="checkbox" id="billingToggle">
+            <input type="checkbox" id="billingToggle" checked>
             <span class="slider round"></span>
           </label>
-          <span id="yearlyLabel" style="color: var(--text-muted);">Annually <span style="background: #dcfce7; color: #166534; font-size: 0.75rem; padding: 2px 8px; border-radius: 20px; font-weight: 700; margin-left: 5px;">🔥 Save 20%</span></span>
+          <span id="yearlyLabel" style="font-weight: 600; color: var(--text);">Annually <span style="background: #dcfce7; color: #166534; font-size: 0.75rem; padding: 2px 8px; border-radius: 20px; font-weight: 700; margin-left: 5px;">🔥 Save up to 23%</span></span>
         </div>
         
-        <p class="section-subtitle mx-auto">Every plan includes a full 14-day free trial. No credit card needed.</p>
+        <p class="section-subtitle mx-auto">Every plan includes a full 30-day (1 month) free trial. All Growth features unlocked. No credit card needed.</p>
       </div>
 
       <div class="pricing-grid">
         <!-- Starter -->
         <div class="pricing-card" id="planStarter">
           <div class="plan-name">Starter</div>
-          <div class="price">₹<span class="price-val" data-monthly="499" data-yearly="399">499</span><span class="price-period">/mo</span></div>
-          <div class="period">Billed monthly</div>
-          <div class="trial-badge" style="background:#f1f5f9; color:#64748b;">Perfect for single retail shop</div>
+          <div class="price">₹<span class="price-val" data-monthly="249" data-yearly="199">199</span><span class="price-period">/mo</span></div>
+          <div class="period">Billed annually</div>
+          <div class="trial-badge" style="background:#f1f5f9; color:#64748b;">Perfect for single retail shops</div>
           <ul class="pricing-features">
-            <li><span class="check">✓</span> Up to 500 Products</li>
-            <li><span class="check">✓</span> Single Warehouse</li>
-            <li><span class="check">✓</span> Basic GST Invoice Gen</li>
-            <li><span class="check">✓</span> High-Speed POS Interface</li>
-            <li><span style="color:#ef4444; margin-right:8px;">✕</span> No Tally Sync</li>
+            <li><span class="check">✓</span> Dashboard & Inventory</li>
+            <li><span class="check">✓</span> Cloud & Mobile POS Terminal</li>
+            <li><span class="check">✓</span> Clients & Expenses Tracking</li>
+            <li><span class="check">✓</span> Day Book & Invoices</li>
+            <li><span class="check">✓</span> Max 2 Users</li>
+            <li><span class="check">✓</span> 500 Invoices / month</li>
           </ul>
-          <a href="#" class="btn btn-secondary" id="starterCta">Start Free Trial</a>
+          <a href="#" class="btn btn-secondary" id="starterCta">Start 30-Day Free Trial</a>
         </div>
 
-        <!-- Pro -->
+        <!-- Growth (Replacd Pro) -->
         <div class="pricing-card popular" id="planPro">
-          <div class="plan-name">Professional</div>
-          <div class="price">₹<span class="price-val" data-monthly="1499" data-yearly="1199">1,499</span><span class="price-period">/mo</span></div>
-          <div class="period">Billed monthly</div>
-          <div class="trial-badge" style="background:var(--primary); color:white;">🚀 Top Choice: Multi-Store</div>
+          <div class="plan-name">Growth</div>
+          <div class="price">₹<span class="price-val" data-monthly="599" data-yearly="499">499</span><span class="price-period">/mo</span></div>
+          <div class="period">Billed annually</div>
+          <div class="trial-badge" style="background:var(--primary); color:white;">🚀 Top Choice: Wholesalers & GST</div>
           <ul class="pricing-features">
-            <li><span class="check">✓</span> Unlimited Products</li>
-            <li><span class="check">✓</span> Up to 5 Multi-Warehouses</li>
-            <li><span class="check">✓</span> Direct Tally Excel Sync</li>
-            <li><span class="check">✓</span> Customer Pricing Tiers</li>
-            <li><span class="check">✓</span> Priority Call Support</li>
+            <li><span class="check">✓</span> <strong>All Starter Features +</strong></li>
+            <li><span class="check">✓</span> <strong>Multi-Location Inventory</strong></li>
+            <li><span class="check">✓</span> Purchases & Supplier Ledger</li>
+            <li><span class="check">✓</span> Vehicles & Fleet Delivery Routes</li>
+            <li><span class="check">✓</span> GSTR Export & WAC Costing</li>
+            <li><span class="check">✓</span> Max 10 Users • Unlimited Invoices</li>
           </ul>
-          <a href="#" class="btn btn-primary" id="proCta">Start Free Trial</a>
+          <a href="#" class="btn btn-primary" id="proCta">Start 30-Day Free Trial</a>
         </div>
 
-        <!-- Enterprise -->
+        <!-- Pro (Replaces Enterprise) -->
         <div class="pricing-card" id="planEnterprise">
-          <div class="plan-name">Enterprise</div>
-          <div class="price">₹<span class="price-val" data-monthly="3499" data-yearly="2799">3,499</span><span class="price-period">/mo</span></div>
-          <div class="period">Billed monthly</div>
-          <div class="trial-badge" style="background:#0f172a; color:white;">🏢 Multi-Region Chain</div>
+          <div class="plan-name">Pro</div>
+          <div class="price">₹<span class="price-val" data-monthly="1299" data-yearly="999">999</span><span class="price-period">/mo</span></div>
+          <div class="period">Billed annually</div>
+          <div class="trial-badge" style="background:#0f172a; color:white;">🏢 Best for Multi-Branch Teams</div>
           <ul class="pricing-features">
-            <li><span class="check">✓</span> Unlimited Locations</li>
-            <li><span class="check">✓</span> Dedicated API Access</li>
-            <li><span class="check">✓</span> Custom Role & Audit Logs</li>
-            <li><span class="check">✓</span> Dedicated Success Manager</li>
-            <li><span class="check">✓</span> Custom Print Formats</li>
+            <li><span class="check">✓</span> <strong>All Growth Features +</strong></li>
+            <li><span class="check">✓</span> User Role Permissions & Management</li>
+            <li><span class="check">✓</span> Team Security Settings</li>
+            <li><span class="check">✓</span> Immutable Enterprise Audit Log</li>
+            <li><span class="check">✓</span> Open API Access & White Labeling</li>
+            <li><span class="check">✓</span> Unlimited Users & Invoices</li>
           </ul>
-          <a href="#" class="btn btn-secondary" id="enterpriseCta">Start Free Trial</a>
+          <a href="#" class="btn btn-secondary" id="enterpriseCta">Start 30-Day Free Trial</a>
         </div>
       </div>
       
-      <div style="text-align:center; margin-top: 30px; color: var(--text-muted); font-size: 0.9rem;">
+      <!-- Detailed Feature Matrix -->
+      <div class="comparison-container">
+        <div class="comparison-title">
+          <h3>Compare complete capabilities</h3>
+          <p>Choose the configuration that aligns perfectly with your operational scale</p>
+        </div>
+        
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th class="col-feature">Platform Feature</th>
+                <th>Starter</th>
+                <th class="col-popular">Growth</th>
+                <th>Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="category-row"><td colspan="4">Core Workspaces</td></tr>
+              <tr>
+                <td>Dashboard</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Inventory</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Sales / POS</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Clients</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Expenses</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Day Book</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Invoices</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+
+              <tr class="category-row"><td colspan="4">Supply & Logistics</td></tr>
+              <tr>
+                <td>Purchases</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Suppliers</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Vehicles / Routes</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Orders Pipeline</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+
+              <tr class="category-row"><td colspan="4">Intelligence, Compliance & Multi-Location</td></tr>
+              <tr>
+                <td>Multi-Location Inventory</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Reports</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Price Lists</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>WAC Costing</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>GSTR Export</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Payroll</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+
+              <tr class="category-row"><td colspan="4">Administration & Enterprise</td></tr>
+              <tr>
+                <td>User Management</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="cross-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Settings</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="cross-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Audit Log</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="cross-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>API Access</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="cross-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>White Label</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="cross-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+
+              <tr class="category-row"><td colspan="4">Volume Thresholds</td></tr>
+              <tr>
+                <td>Max Active Users</td>
+                <td>2 Users</td>
+                <td class="col-popular">10 Users</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Max Invoices / Month</td>
+                <td>500 / mo</td>
+                <td class="col-popular">Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top: 50px; color: var(--text-muted); font-size: 0.9rem;">
         🔒 30-Day Money-Back Guarantee • 💳 Cancel Anytime • 💬 24/7 Human Support
       </div>
     </div>
@@ -661,7 +840,7 @@
         <h2>Ready to Scale Your Operations With<br>Maximum <span class="text-highlight">Clarity?</span></h2>
         <p>Join over 2,400 leading retail and B2B operations leveraging LedgrPro. Get set up in minutes.</p>
         <div class="hero-actions" style="justify-content: center; margin-top: 32px;">
-          <a href="#" class="btn btn-primary btn-large">Start Free 60-Day Trial →</a>
+          <a href="#" class="btn btn-primary btn-large">Start Free 30-Day Trial →</a>
           <a href="#" class="btn btn-secondary btn-large" style="background: white;">Schedule Live Demo</a>
         </div>
       </div>
@@ -864,6 +1043,12 @@
             val.innerText = newVal;
             val.style.opacity = 1;
           }, 150);
+        });
+
+        // Polish: Update the "Billed monthly/annually" labels
+        const periodLabels = document.querySelectorAll('.period');
+        periodLabels.forEach(label => {
+          label.innerText = isYearly ? "Billed annually" : "Billed monthly";
         });
 
         if(isYearly) {
