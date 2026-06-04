@@ -1,201 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Integrations — StockMate</title>
-  <meta name="description" content="Connect your store with WhatsApp, UPI payments, GST portal exports, and high-performance Supabase backend APIs.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .int-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-    .int-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 30px;
-      background: var(--surface);
-      transition: var(--transition);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .int-card:hover {
-      border-color: var(--primary);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-card);
-    }
-    .int-icon {
-      width: 50px;
-      height: 50px;
-      background: #f1f5f9;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-    .int-card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .int-card p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-      flex-grow: 1;
-    }
-    .int-status {
-      font-size: 0.75rem;
-      font-weight: 700;
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 20px;
-      margin-bottom: 16px;
-      align-self: flex-start;
-    }
-    .status-live { background: rgba(16, 185, 129, 0.1); color: var(--accent-green); }
-    .status-soon { background: rgba(245, 158, 11, 0.1); color: #d97706; }
-  </style>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Integrations — LedgrPro</title>
+<meta name="description" content="LedgrPro works with UPI, WhatsApp, payment gateways, GST portal exports, Tally and more."/>
+<link rel="icon" href="logo.svg"/>
+<link rel="canonical" href="https://ledgrpro.com/integrations.html"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { primary:'#1A1815', secondary:'#6b6660', surface:'#FBFAF7', canvas:'#FFFFFF', line:'#E9E6DF', accent:'#D97706', 'accent-700':'#B45309' },
+    fontFamily: { sans:['Manrope','sans-serif'], mono:['JetBrains Mono','monospace'] },
+  }}}
+</script>
+<style>.mono{font-variant-numeric:tabular-nums}</style>
 </head>
-<body class="subpage-body">
+<body class="bg-canvas text-primary font-sans antialiased">
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="./index.html" class="navbar-logo">
-        <img src="logo.png" alt="LedgrPro Logo" class="app-logo">
-      </a>
-      <div class="navbar-links" id="navLinks">
-        <a href="./features.html">Features</a>
-        <a href="./index.html#how-it-works">How It Works</a>
-        <a href="./pricing.html">Pricing</a>
-        <a href="./index.html#testimonials">Testimonials</a>
-      </div>
-      <div class="navbar-actions">
-        <a href="./index.html#demo" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text);">Book Demo</a>
-        <a href="#" class="btn btn-secondary">Log In</a>
-        <a href="./pricing.html" class="btn btn-primary">Start Free Trial</a>
-      </div>
+<nav class="bg-canvas/80 backdrop-blur-md border-b border-line w-full sticky top-0 z-50">
+  <div class="flex justify-between items-center w-full px-6 lg:px-8 py-4 max-w-[1200px] mx-auto">
+    <a href="/" class="flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-accent text-white font-extrabold flex items-center justify-center">L</span><span class="text-lg font-extrabold tracking-tight">LedgrPro</span></a>
+    <div class="hidden md:flex gap-7 items-center">
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="features.html">Features</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+      <a class="text-sm font-medium text-primary" href="integrations.html">Integrations</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="about.html">About</a>
     </div>
-  </nav>
+    <div class="hidden md:flex gap-3 items-center">
+      <a href="https://app.ledgrpro.com/login" class="text-sm font-semibold text-secondary hover:text-primary transition-colors">Sign In</a>
+      <a href="register.html" class="bg-accent text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-accent-700 transition-colors">Get Started</a>
+    </div>
+    <a href="register.html" class="md:hidden bg-accent text-white text-sm font-semibold px-4 py-2 rounded-full">Start</a>
+  </div>
+</nav>
 
-  <!-- ========== HERO ========== -->
-  <section class="subpage-hero">
-    <div class="container">
-      <div class="subpage-hero-content">
-        <h1>Connected <span class="gradient-text">Commerce</span>.</h1>
-        <p>StockMate plugs natively into your active workflows, ensuring payment reconciliations and tax exports happen automatically.</p>
-      </div>
+<main class="w-full">
+  <section class="max-w-[1200px] mx-auto px-6 lg:px-8 pt-20 lg:pt-28 pb-12 text-center">
+    <span class="mono text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Integrations</span>
+    <h1 class="mt-4 text-4xl md:text-5xl font-light tracking-tight">Plays well with your stack.</h1>
+    <p class="mt-5 max-w-xl mx-auto text-secondary font-light leading-relaxed">Collect on UPI, send on WhatsApp, file to the GST portal and export to Excel or Tally. More connectors arrive every month.</p>
+  </section>
+
+  <section class="max-w-[1200px] mx-auto px-6 lg:px-8 pb-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line rounded-2xl overflow-hidden border border-line">
+      <div class="bg-canvas p-7"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent" style="font-size:24px">qr_code_2</span><span class="text-[9px] font-bold uppercase tracking-widest text-accent bg-accent/10 px-2 py-0.5 rounded-full">Live</span></div><h3 class="mt-4 text-lg font-medium">UPI Collections</h3><p class="mt-2 text-sm text-secondary font-light">Dynamic UPI QR on every invoice &amp; POS receipt — collect in seconds.</p></div>
+      <div class="bg-canvas p-7"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent" style="font-size:24px">chat</span><span class="text-[9px] font-bold uppercase tracking-widest text-accent bg-accent/10 px-2 py-0.5 rounded-full">Live</span></div><h3 class="mt-4 text-lg font-medium">WhatsApp Share</h3><p class="mt-2 text-sm text-secondary font-light">Send invoices, receipts and payment reminders straight to WhatsApp.</p></div>
+      <div class="bg-canvas p-7"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent" style="font-size:24px">description</span><span class="text-[9px] font-bold uppercase tracking-widest text-accent bg-accent/10 px-2 py-0.5 rounded-full">Live</span></div><h3 class="mt-4 text-lg font-medium">GSTR Export</h3><p class="mt-2 text-sm text-secondary font-light">GSTR-1 &amp; 3B ready exports for the GST portal — Excel / JSON.</p></div>
+      <div class="bg-canvas p-7"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent" style="font-size:24px">table_view</span><span class="text-[9px] font-bold uppercase tracking-widest text-accent bg-accent/10 px-2 py-0.5 rounded-full">Live</span></div><h3 class="mt-4 text-lg font-medium">Excel &amp; CSV</h3><p class="mt-2 text-sm text-secondary font-light">Export any report to .xlsx or .csv for your accountant.</p></div>
+      <div class="bg-canvas p-7"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent" style="font-size:24px">picture_as_pdf</span><span class="text-[9px] font-bold uppercase tracking-widest text-accent bg-accent/10 px-2 py-0.5 rounded-full">Live</span></div><h3 class="mt-4 text-lg font-medium">PDF Letterhead</h3><p class="mt-2 text-sm text-secondary font-light">Print-perfect statements with your business letterhead.</p></div>
+      <div class="bg-canvas p-7"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent" style="font-size:24px">credit_card</span><span class="text-[9px] font-bold uppercase tracking-widest text-secondary bg-line px-2 py-0.5 rounded-full">Soon</span></div><h3 class="mt-4 text-lg font-medium">Payment Gateways</h3><p class="mt-2 text-sm text-secondary font-light">Cards &amp; net-banking via Razorpay / Cashfree.</p></div>
+      <div class="bg-canvas p-7"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent" style="font-size:24px">sync_alt</span><span class="text-[9px] font-bold uppercase tracking-widest text-secondary bg-line px-2 py-0.5 rounded-full">Soon</span></div><h3 class="mt-4 text-lg font-medium">Tally Export</h3><p class="mt-2 text-sm text-secondary font-light">Hand vouchers to your CA in Tally-compatible format.</p></div>
+      <div class="bg-canvas p-7"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent" style="font-size:24px">api</span><span class="text-[9px] font-bold uppercase tracking-widest text-accent bg-accent/10 px-2 py-0.5 rounded-full">Enterprise</span></div><h3 class="mt-4 text-lg font-medium">REST API</h3><p class="mt-2 text-sm text-secondary font-light">Build on your data — products, sales, stock &amp; reports.</p></div>
+      <div class="bg-canvas p-7"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent" style="font-size:24px">label</span><span class="text-[9px] font-bold uppercase tracking-widest text-accent bg-accent/10 px-2 py-0.5 rounded-full">Enterprise</span></div><h3 class="mt-4 text-lg font-medium">White-label</h3><p class="mt-2 text-sm text-secondary font-light">Your brand on the app &amp; documents.</p></div>
     </div>
   </section>
 
-  <!-- ========== CONTENT ========== -->
-  <section class="section">
-    <div class="container">
-      <div style="text-align: center; max-width: 600px; margin: 0 auto 40px;">
-        <span class="section-label">🧩 Integrations</span>
-        <h2 class="section-title">Native Tools Ecosystem</h2>
-      </div>
-
-      <div class="int-grid">
-        
-        <!-- WhatsApp -->
-        <div class="int-card">
-          <div class="int-status status-live">Live</div>
-          <div class="int-icon">💬</div>
-          <h3>WhatsApp Business</h3>
-          <p>Instantly share PDF invoices, estimated quotes, and credit balance links directly to your clients' WhatsApp screens.</p>
-        </div>
-
-        <!-- GST Portal -->
-        <div class="int-card">
-          <div class="int-status status-live">Live</div>
-          <div class="int-icon">🇮🇳</div>
-          <h3>GST Portal Direct</h3>
-          <p>Export perfectly structured files for direct upload to the Indian Govt GST portal (GSTR-1 and GSTR-3B compiled formats).</p>
-        </div>
-
-        <!-- Supabase -->
-        <div class="int-card">
-          <div class="int-status status-live">Live</div>
-          <div class="int-icon">⚡</div>
-          <h3>Supabase Infra</h3>
-          <p>Secured by enterprise PostgreSQL structures. Enables direct API access and real-time database triggers for Enterprise users.</p>
-        </div>
-
-        <!-- UPI/POS -->
-        <div class="int-card">
-          <div class="int-status status-live">Live</div>
-          <div class="int-icon">📱</div>
-          <h3>POS Payment Tracking</h3>
-          <p>Track multiple settlement methods inside the Day Book: Cash, Credit, and direct UPI QR verification codes.</p>
-        </div>
-
-        <!-- Razorpay / Paytm -->
-        <div class="int-card">
-          <div class="int-status status-soon">Planned</div>
-          <div class="int-icon">💳</div>
-          <h3>Razorpay & Paytm</h3>
-          <p>Collect digital payments directly through dynamically generated payment gateways appended on invoice links.</p>
-        </div>
-
-        <!-- Tally Import -->
-        <div class="int-card">
-          <div class="int-status status-soon">Planned</div>
-          <div class="int-icon">📊</div>
-          <h3>Tally Legacy Import</h3>
-          <p>Easily migrate years of historical accounting vouchers from desktop Tally ERP directly into your cloud ledger.</p>
-        </div>
-
-      </div>
-    </div>
+  <section class="max-w-[1200px] mx-auto px-6 lg:px-8 py-16 text-center">
+    <h2 class="text-3xl md:text-4xl font-light tracking-tight">Need a specific integration?</h2>
+    <p class="mt-4 text-secondary font-light">Tell us what you use — we ship connectors fast.</p>
+    <a href="contact.html" class="inline-block mt-7 text-sm font-semibold px-7 py-3.5 rounded-full border border-line hover:bg-surface transition-colors">Request an integration</a>
   </section>
+</main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="./index.html" style="display: inline-block; margin-bottom: 20px;">
-            <img src="logo.png" alt="LedgrPro Logo" style="height: 52px; mix-blend-mode: multiply; opacity: 0.9;">
-          </a>
-          <p>The modern inventory management platform built for businesses that want to grow smarter, not harder.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <a href="./features.html">Features</a>
-          <a href="./pricing.html">Pricing</a>
-          <a href="./integrations.html">Integrations</a>
-          <a href="./changelog.html">Changelog</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="./about.html">About</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./careers.html">Careers</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
-          <a href="./security.html">Security</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 LedgrPro Platforms Ltd (StockMate). All rights reserved.</p>
-      </div>
+<footer class="bg-canvas border-t border-line w-full">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 lg:px-8 py-8 max-w-[1200px] mx-auto gap-4">
+    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-md bg-accent text-white text-xs font-extrabold flex items-center justify-center">L</span><span class="font-extrabold tracking-tight">LedgrPro</span></div>
+    <div class="flex flex-wrap justify-center gap-5">
+      <a class="text-xs text-secondary hover:text-primary" href="features.html">Features</a>
+      <a class="text-xs text-secondary hover:text-primary" href="pricing.html">Pricing</a>
+      <a class="text-xs text-secondary hover:text-primary" href="privacy.html">Privacy</a>
+      <a class="text-xs text-secondary hover:text-primary" href="terms.html">Terms</a>
+      <a class="text-xs text-secondary hover:text-primary" href="contact.html">Contact</a>
     </div>
-  </footer>
-
-</body>
-</html>
+    <div class="text-xs text-secondary font-light">© 2026 LedgrPro. Built for Indian business.</div>
+  </div>
+</footer>
+</body></html>

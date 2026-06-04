@@ -1,104 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — StockMate</title>
-  <meta name="description" content="How we secure your data. Fully compliant with the IT Act 2000 (India) with secure in-region data isolation.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Privacy Policy — LedgrPro</title>
+<meta name="description" content="How LedgrPro protects your business ledgers and customer data. In-region hosting, encryption, no data selling."/>
+<link rel="icon" href="logo.svg"/>
+<link rel="canonical" href="https://ledgrpro.com/privacy.html"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { primary:'#1A1815', secondary:'#6b6660', surface:'#FBFAF7', canvas:'#FFFFFF', line:'#E9E6DF', accent:'#D97706', 'accent-700':'#B45309' },
+    fontFamily: { sans:['Manrope','sans-serif'], mono:['JetBrains Mono','monospace'] },
+  }}}
+</script>
+<style>
+  .mono{font-variant-numeric:tabular-nums}
+  .doc h2{font-size:1.05rem;font-weight:600;margin-top:2rem;margin-bottom:.5rem;color:#1A1815}
+  .doc p{font-size:.92rem;line-height:1.7;color:#6b6660;font-weight:300}
+  .doc strong{color:#1A1815;font-weight:600}
+</style>
 </head>
-<body class="subpage-body">
+<body class="bg-canvas text-primary font-sans antialiased">
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="./index.html" class="navbar-logo">
-        <img src="logo.png" alt="LedgrPro Logo" class="app-logo">
-      </a>
-      <div class="navbar-links" id="navLinks">
-        <a href="./features.html">Features</a>
-        <a href="./index.html#how-it-works">How It Works</a>
-        <a href="./pricing.html">Pricing</a>
-        <a href="./index.html#testimonials">Testimonials</a>
-      </div>
-      <div class="navbar-actions">
-        <a href="./index.html#demo" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text);">Book Demo</a>
-        <a href="#" class="btn btn-secondary">Log In</a>
-        <a href="./pricing.html" class="btn btn-primary">Start Free Trial</a>
-      </div>
+<nav class="bg-canvas/80 backdrop-blur-md border-b border-line w-full sticky top-0 z-50">
+  <div class="flex justify-between items-center w-full px-6 lg:px-8 py-4 max-w-[1200px] mx-auto">
+    <a href="/" class="flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-accent text-white font-extrabold flex items-center justify-center">L</span><span class="text-lg font-extrabold tracking-tight">LedgrPro</span></a>
+    <div class="hidden md:flex gap-7 items-center">
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="features.html">Features</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="integrations.html">Integrations</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="about.html">About</a>
     </div>
-  </nav>
-
-  <!-- ========== HERO ========== -->
-  <section class="subpage-hero">
-    <div class="container">
-      <div class="subpage-hero-content">
-        <h1>Privacy <span class="gradient-text">Policy</span>.</h1>
-        <p>How we protect your business ledgers and customer metrics. Fully compliant with the Information Technology Act, 2000.</p>
-      </div>
+    <div class="hidden md:flex gap-3 items-center">
+      <a href="https://app.ledgrpro.com/login" class="text-sm font-semibold text-secondary hover:text-primary transition-colors">Sign In</a>
+      <a href="register.html" class="bg-accent text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-accent-700 transition-colors">Get Started</a>
     </div>
-  </section>
-
-  <!-- ========== DOC CONTENT ========== -->
-  <div class="legal-doc-container">
-    <div class="legal-meta">Last Modified: May 13, 2026 | Version 2.2</div>
-    <div class="legal-doc">
-      <h2>1. Data Hosting & In-Region Storage</h2>
-      <p>All StockMate accounting ledgers, client records, and transactional databases are hosted securely on <strong>Supabase backend infrastructure</strong>. To ensure legal compliance and maximum loading speeds for the real India, our database instances are physically located in local availability regions (AWS Mumbai).</p>
-      
-      <h2>2. Absolute Zero-Selling Commitment</h2>
-      <p>We maintain a strict stance on client confidentiality: <strong>we do not sell, lease, or monetize your accounting or customer data to third parties.</strong> Your client list and margin structures are yours alone.</p>
-
-      <h2>3. Compliance with the IT Act, 2000</h2>
-      <p>StockMate maintains technical and organizational safeguards mandated by the <strong>Information Technology Act 2000 (India)</strong> and subsequent amendments regarding sensitive personal data and information processing standards.</p>
-
-      <h2>4. Financial & GST Data Retention</h2>
-      <p>We retain historical ledger files while your subscription remains active. Should your account remain dormant, we follow structured regulatory guidelines to secure records while enabling you to access historical GSTR spreadsheets.</p>
-
-      <h2>5. The Right to Deletion</h2>
-      <p>You retain absolute ownership over your database console. You may trigger a request to delete your complete administrative console and tenant data at any time. Upon processing, our systems securely purge all tenant storage allocations.</p>
-    </div>
+    <a href="register.html" class="md:hidden bg-accent text-white text-sm font-semibold px-4 py-2 rounded-full">Start</a>
   </div>
+</nav>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="./index.html" style="display: inline-block; margin-bottom: 20px;">
-            <img src="logo.png" alt="LedgrPro Logo" style="height: 52px; mix-blend-mode: multiply; opacity: 0.9;">
-          </a>
-          <p>The modern inventory management platform built for businesses that want to grow smarter, not harder.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <a href="./features.html">Features</a>
-          <a href="./pricing.html">Pricing</a>
-          <a href="./integrations.html">Integrations</a>
-          <a href="./changelog.html">Changelog</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="./about.html">About</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./careers.html">Careers</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
-          <a href="./security.html">Security</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 LedgrPro Platforms Ltd (StockMate). All rights reserved.</p>
-      </div>
+<main class="max-w-[760px] mx-auto px-6 lg:px-8 pt-20 lg:pt-24 pb-24">
+  <span class="mono text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Legal</span>
+  <h1 class="mt-4 text-4xl md:text-5xl font-light tracking-tight">Privacy Policy.</h1>
+  <p class="mt-5 text-secondary font-light leading-relaxed">How we protect your business ledgers and customer data — compliant with modern data-protection standards.</p>
+  <div class="mt-3 mono text-xs text-secondary">Last modified: May 26, 2026 · Version 2.3</div>
+
+  <div class="doc mt-8 border-t border-line pt-2">
+    <h2>1. Data Hosting &amp; In-Region Storage</h2>
+    <p>All LedgrPro accounting ledgers, client records, and transactional databases are hosted securely on <strong>Supabase backend infrastructure</strong>. To ensure legal compliance and fast loading, our database instances are physically located in local availability regions (AWS Mumbai).</p>
+    <h2>2. Absolute Zero-Selling Commitment</h2>
+    <p>We maintain a strict stance on client confidentiality: <strong>we do not sell, lease, or monetize your accounting or customer data to third parties.</strong> Your client list and margin structures are yours alone.</p>
+    <h2>3. Security &amp; Data Protection Standards</h2>
+    <p>LedgrPro maintains technical and organizational safeguards for sensitive personal data, including AES-256 database encryption and continuous backups.</p>
+    <h2>4. Financial &amp; GST Data Retention</h2>
+    <p>We retain historical ledger files while your subscription remains active. Should your account become dormant, we follow structured regulatory guidelines to secure records while enabling you to access historical GSTR spreadsheets.</p>
+    <h2>5. The Right to Deletion</h2>
+    <p>You retain absolute ownership over your database. You may request deletion of your complete administrative console and tenant data at any time. Upon processing, our systems securely purge all tenant storage allocations.</p>
+  </div>
+</main>
+
+<footer class="bg-canvas border-t border-line w-full">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 lg:px-8 py-8 max-w-[1200px] mx-auto gap-4">
+    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-md bg-accent text-white text-xs font-extrabold flex items-center justify-center">L</span><span class="font-extrabold tracking-tight">LedgrPro</span></div>
+    <div class="flex flex-wrap justify-center gap-5">
+      <a class="text-xs text-secondary hover:text-primary" href="features.html">Features</a>
+      <a class="text-xs text-secondary hover:text-primary" href="pricing.html">Pricing</a>
+      <a class="text-xs text-secondary hover:text-primary" href="terms.html">Terms</a>
+      <a class="text-xs text-secondary hover:text-primary" href="security.html">Security</a>
+      <a class="text-xs text-secondary hover:text-primary" href="contact.html">Contact</a>
     </div>
-  </footer>
-
-</body>
-</html>
+    <div class="text-xs text-secondary font-light">© 2026 LedgrPro. Built for Indian business.</div>
+  </div>
+</footer>
+</body></html>

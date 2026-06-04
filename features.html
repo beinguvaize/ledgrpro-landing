@@ -1,215 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Features — StockMate</title>
-  <meta name="description" content="Explore modules built for Indian commerce: mobile POS, GSTR-1 export, delivery routes, and multi-location stock management.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .feat-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 40px; }
-    .feat-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      box-shadow: var(--shadow-card);
-      transition: var(--transition);
-    }
-    .feat-box:hover { border-color: var(--primary); transform: translateY(-3px); }
-    .feat-box h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-    .feat-box p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
-    .plan-split {
-      background: #f8fafc;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 40px;
-      margin: 60px 0;
-    }
-    .plan-split h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 24px; text-align: center; }
-    .plan-tier-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .tier-list h4 { font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 8px;}
-    .tier-list ul li { margin-bottom: 10px; font-size: 0.95rem; display: flex; gap: 8px; align-items: center; }
-    .tier-list ul li::before { content: '✓'; color: var(--accent-green); font-weight: 900; }
-  </style>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Features — LedgrPro GST Billing, Inventory, POS &amp; Reports</title>
+<meta name="description" content="Explore LedgrPro features: GST billing, offline POS, FIFO inventory, receivables, expenses, day book, van sales, payroll and 28 reports — web, desktop and mobile."/>
+<link rel="icon" href="logo.svg"/>
+<link rel="canonical" href="https://ledgrpro.com/features.html"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { primary:'#1A1815', secondary:'#6b6660', surface:'#FBFAF7', canvas:'#FFFFFF', line:'#E9E6DF', accent:'#D97706', 'accent-700':'#B45309' },
+    fontFamily: { sans:['Manrope','sans-serif'], mono:['JetBrains Mono','monospace'] },
+  }}}
+</script>
+<style>.mono{font-variant-numeric:tabular-nums}</style>
 </head>
-<body class="subpage-body">
+<body class="bg-canvas text-primary font-sans antialiased">
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="./index.html" class="navbar-logo">
-        <img src="logo.png" alt="LedgrPro Logo" class="app-logo">
-      </a>
-      <div class="navbar-links" id="navLinks">
-        <a href="./features.html" class="active" style="color: var(--primary); font-weight: 700;">Features</a>
-        <a href="./index.html#how-it-works">How It Works</a>
-        <a href="./pricing.html">Pricing</a>
-        <a href="./index.html#testimonials">Testimonials</a>
+<nav class="bg-canvas/80 backdrop-blur-md border-b border-line w-full sticky top-0 z-50">
+  <div class="flex justify-between items-center w-full px-6 lg:px-8 py-4 max-w-[1200px] mx-auto">
+    <a href="/" class="flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-accent text-white font-extrabold flex items-center justify-center">L</span><span class="text-lg font-extrabold tracking-tight">LedgrPro</span></a>
+    <div class="hidden md:flex gap-7 items-center">
+      <a class="text-sm font-medium text-primary" href="features.html">Features</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="integrations.html">Integrations</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="about.html">About</a>
+    </div>
+    <div class="hidden md:flex gap-3 items-center">
+      <a href="https://app.ledgrpro.com/login" class="text-sm font-semibold text-secondary hover:text-primary transition-colors">Sign In</a>
+      <a href="register.html" class="bg-accent text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-accent-700 transition-colors">Get Started</a>
+    </div>
+    <a href="register.html" class="md:hidden bg-accent text-white text-sm font-semibold px-4 py-2 rounded-full">Start</a>
+  </div>
+</nav>
+
+<main class="w-full">
+  <section class="max-w-[1200px] mx-auto px-6 lg:px-8 pt-20 lg:pt-28 pb-12">
+    <span class="mono text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Features</span>
+    <h1 class="mt-4 text-4xl md:text-5xl font-light tracking-tight max-w-3xl leading-tight">Everything a shop needs, in one ledger.</h1>
+    <p class="mt-6 max-w-2xl text-base text-secondary font-light leading-relaxed">From the counter to the books — billing, stock, cash, compliance and people, all in sync across web, desktop and mobile. Offline-first by design.</p>
+  </section>
+
+  <!-- alternating deep-dives -->
+  <section class="max-w-[1200px] mx-auto px-6 lg:px-8 pb-8 space-y-px bg-line rounded-2xl overflow-hidden border border-line">
+    <!-- block builder via repeated rows -->
+    <div class="bg-canvas grid lg:grid-cols-2">
+      <div class="p-8 lg:p-12">
+        <span class="material-symbols-outlined text-accent" style="font-size:26px">receipt_long</span>
+        <h2 class="mt-4 text-2xl font-light tracking-tight">GST Billing &amp; Invoices</h2>
+        <p class="mt-3 text-sm text-secondary font-light leading-relaxed">GST-correct invoices with CGST/SGST/IGST, inclusive or exclusive tax, HSN codes and standardised e-invoice numbering (INV/FY/####). Print thermal receipts or A4, share on WhatsApp, attach UPI QR — all offline.</p>
+        <ul class="mt-5 grid grid-cols-2 gap-2 text-sm text-secondary font-light">
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Thermal &amp; A4 print</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> UPI QR on invoice</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Credit &amp; partial pay</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Voids &amp; returns</li>
+        </ul>
       </div>
-      <div class="navbar-actions">
-        <a href="./index.html#demo" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text);">Book Demo</a>
-        <a href="#" class="btn btn-secondary">Log In</a>
-        <a href="./pricing.html" class="btn btn-primary">Start Free Trial</a>
+      <div class="bg-surface flex items-center justify-center p-8"><img src="3d-finance.webp" alt="Billing" class="max-h-56 object-contain"/></div>
+    </div>
+
+    <div class="bg-canvas grid lg:grid-cols-2">
+      <div class="bg-surface flex items-center justify-center p-8 order-last lg:order-first"><img src="3d-pos.webp" alt="POS" class="max-h-56 object-contain"/></div>
+      <div class="p-8 lg:p-12">
+        <span class="material-symbols-outlined text-accent" style="font-size:26px">point_of_sale</span>
+        <h2 class="mt-4 text-2xl font-light tracking-tight">Offline POS</h2>
+        <p class="mt-3 text-sm text-secondary font-light leading-relaxed">A counter that never waits. Quick product search, category chips, fast-moving quick-add, order discounts and hold/park. Dual-screen customer display and UPI QR built in. Tag every sale to a store and cashier.</p>
+        <ul class="mt-5 grid grid-cols-2 gap-2 text-sm text-secondary font-light">
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Discount &amp; hold sale</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Customer display</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Multi-store &amp; cashier</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Barcode scan</li>
+        </ul>
       </div>
     </div>
-  </nav>
 
-  <!-- ========== HERO ========== -->
-  <section class="subpage-hero">
-    <div class="container">
-      <div class="subpage-hero-content">
-        <h1>Powerful <span class="gradient-text">Modules</span>.</h1>
-        <p>Built for high-volume Indian SMBs. From real-time mobile POS to sophisticated multi-warehouse logistics—StockMate delivers enterprise tools without the complexity.</p>
+    <div class="bg-canvas grid lg:grid-cols-2">
+      <div class="p-8 lg:p-12">
+        <span class="material-symbols-outlined text-accent" style="font-size:26px">inventory_2</span>
+        <h2 class="mt-4 text-2xl font-light tracking-tight">Inventory &amp; FIFO Costing</h2>
+        <p class="mt-3 text-sm text-secondary font-light leading-relaxed">Real-time stock across stores and vehicles, with product batches, FIFO/WAC costing, reorder levels and low-stock alerts. Adjust, transfer and audit movements — your stock value always ties to the ledger.</p>
+        <ul class="mt-5 grid grid-cols-2 gap-2 text-sm text-secondary font-light">
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> FIFO / WAC</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Batches &amp; expiry</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Low-stock alerts</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Stock adjust &amp; history</li>
+        </ul>
+      </div>
+      <div class="bg-surface flex items-center justify-center p-8"><img src="3d-inventory.webp" alt="Inventory" class="max-h-56 object-contain"/></div>
+    </div>
+
+    <div class="bg-canvas grid lg:grid-cols-2">
+      <div class="bg-surface flex items-center justify-center p-8 order-last lg:order-first"><img src="3d-logistics.webp" alt="Van sales" class="max-h-56 object-contain"/></div>
+      <div class="p-8 lg:p-12">
+        <span class="material-symbols-outlined text-accent" style="font-size:26px">local_shipping</span>
+        <h2 class="mt-4 text-2xl font-light tracking-tight">Van Sales &amp; Routes</h2>
+        <p class="mt-3 text-sm text-secondary font-light leading-relaxed">Load a vehicle, dispatch a route, sell on the move from the mobile app, then reconcile returns at the warehouse. Live vehicle stock and route coverage keep distribution honest.</p>
+        <ul class="mt-5 grid grid-cols-2 gap-2 text-sm text-secondary font-light">
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Vehicle load &amp; dispatch</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Mobile field sales</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Route coverage</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Warehouse reconcile</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ========== DIFFERENTIATORS ========== -->
-  <section class="section" style="padding-bottom: 40px;">
-    <div class="container">
-      <div style="text-align: center; max-width: 600px; margin: 0 auto 40px;">
-        <span class="section-label">⚡ Key Differentiators</span>
-        <h2 class="section-title">Why Indian Businesses Switch to StockMate</h2>
-      </div>
-
-      <div class="feat-showcase">
-        
-        <!-- Feature 1 -->
-        <div class="feat-box">
-          <h3>📱 Mobile POS Hub</h3>
-          <p>Works on any phone or tablet browser out-of-the-box. No heavy app downloads required. Empower field staff to take orders, record cash, and print thermal bills instantly.</p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="feat-box">
-          <h3>🇮🇳 Ready GSTR Exports</h3>
-          <p>Skip long CA hours. Compile and export GSTR-1 and GSTR-3B formatted data natively aligned with active Indian taxation portals.</p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="feat-box">
-          <h3>🚚 Fleet Delivery Routing</h3>
-          <p>Assign client orders to vehicle manifests and map optimized delivery sequences straight from the dispatch panel.</p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="feat-box">
-          <h3>💬 WhatsApp Invoice Sharing</h3>
-          <p>Instantly relay official PDF invoices, Low-Stock reminders, and digital credit outstanding alerts to your client's WhatsApp thread.</p>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class="feat-box">
-          <h3>🏢 Multi-Location Inventory</h3>
-          <p>Maintain isolated inventory logs for separate storefronts, regional warehouses, or storage godowns with seamless stock transfers.</p>
-        </div>
-
-      </div>
+  <!-- secondary feature grid -->
+  <section class="max-w-[1200px] mx-auto px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-line rounded-2xl overflow-hidden border border-line">
+      <div class="bg-canvas p-7"><span class="material-symbols-outlined text-accent" style="font-size:22px">groups</span><h3 class="mt-3 font-medium">Clients &amp; Receivables</h3><p class="mt-2 text-sm text-secondary font-light">Dues, ageing, statements, settlements.</p></div>
+      <div class="bg-canvas p-7"><span class="material-symbols-outlined text-accent" style="font-size:22px">payments</span><h3 class="mt-3 font-medium">Expenses &amp; ITC</h3><p class="mt-2 text-sm text-secondary font-light">Recurring, payment methods, input-tax-credit.</p></div>
+      <div class="bg-canvas p-7"><span class="material-symbols-outlined text-accent" style="font-size:22px">menu_book</span><h3 class="mt-3 font-medium">Day Book &amp; Bank</h3><p class="mt-2 text-sm text-secondary font-light">Cash position, reconciliation, per store.</p></div>
+      <div class="bg-canvas p-7"><span class="material-symbols-outlined text-accent" style="font-size:22px">badge</span><h3 class="mt-3 font-medium">Payroll</h3><p class="mt-2 text-sm text-secondary font-light">Staff, attendance pay runs, salary tracking.</p></div>
+      <div class="bg-canvas p-7"><span class="material-symbols-outlined text-accent" style="font-size:22px">monitoring</span><h3 class="mt-3 font-medium">28 Reports</h3><p class="mt-2 text-sm text-secondary font-light">Balance Sheet, P&amp;L, GSTR — Excel &amp; PDF.</p></div>
+      <div class="bg-canvas p-7"><span class="material-symbols-outlined text-accent" style="font-size:22px">store</span><h3 class="mt-3 font-medium">Multi-store</h3><p class="mt-2 text-sm text-secondary font-light">Stores, cashiers, store-level books.</p></div>
+      <div class="bg-canvas p-7"><span class="material-symbols-outlined text-accent" style="font-size:22px">cloud_off</span><h3 class="mt-3 font-medium">Offline Sync</h3><p class="mt-2 text-sm text-secondary font-light">Outbox queue, auto-reconcile, no lost sale.</p></div>
+      <div class="bg-canvas p-7"><span class="material-symbols-outlined text-accent" style="font-size:22px">shield</span><h3 class="mt-3 font-medium">Roles &amp; Audit</h3><p class="mt-2 text-sm text-secondary font-light">Permissions, audit log, multi-tenant security.</p></div>
     </div>
   </section>
 
-  <!-- ========== PLAN BREAKDOWNS ========== -->
-  <section class="section" style="padding-top: 40px;">
-    <div class="container">
-      <div class="plan-split">
-        <h2>Detailed Module Matrix</h2>
-        
-        <div class="plan-tier-grid">
-          
-          <!-- Starter -->
-          <div class="tier-list">
-            <h4>All Plans (Starter+)</h4>
-            <ul>
-              <li>Dashboard & Activity View</li>
-              <li>Real-Time Shop Inventory</li>
-              <li>Mobile-First Sales & POS</li>
-              <li>Client Ledger Management</li>
-              <li>Expense & Petty Cash Tracker</li>
-              <li>Daily Day Book Sync</li>
-              <li>Direct GST Invoicing</li>
-            </ul>
-          </div>
-
-          <!-- Pro -->
-          <div class="tier-list">
-            <h4>Professional+</h4>
-            <ul>
-              <li>Supplier Core Ledgers</li>
-              <li>Purchase Order Pipeline</li>
-              <li>Vehicle Fleet & Routes</li>
-              <li>Wholesale Price Lists</li>
-              <li>WAC Inventory Costing</li>
-              <li>GSTR Data Compiler</li>
-              <li>Basic Staff Payroll</li>
-            </ul>
-          </div>
-
-          <!-- Enterprise -->
-          <div class="tier-list">
-            <h4>Enterprise</h4>
-            <ul>
-              <li>Granular User Management</li>
-              <li>Multi-Location Warehouse Hub</li>
-              <li>Immutable Audit Logging</li>
-              <li>External REST API Tokens</li>
-              <li>White-Label System Console</li>
-              <li>Dedicated Success Manager</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-
-      <div style="text-align: center;">
-        <a href="./pricing.html" class="btn btn-primary btn-large">View Plans & Simple Pricing →</a>
-      </div>
-    </div>
+  <section class="max-w-[1200px] mx-auto px-6 lg:px-8 py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-light tracking-tight">See it on your own data.</h2>
+    <a href="register.html" class="inline-block mt-7 bg-accent text-white text-sm font-semibold px-7 py-3.5 rounded-full hover:bg-accent-700 transition-colors shadow-lg shadow-accent/20">Start free for 30 days</a>
   </section>
+</main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="./index.html" style="display: inline-block; margin-bottom: 20px;">
-            <img src="logo.png" alt="LedgrPro Logo" style="height: 52px; mix-blend-mode: multiply; opacity: 0.9;">
-          </a>
-          <p>The modern inventory management platform built for businesses that want to grow smarter, not harder.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <a href="./features.html">Features</a>
-          <a href="./pricing.html">Pricing</a>
-          <a href="./integrations.html">Integrations</a>
-          <a href="./changelog.html">Changelog</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="./about.html">About</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./careers.html">Careers</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
-          <a href="./security.html">Security</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 LedgrPro Platforms Ltd (StockMate). All rights reserved.</p>
-      </div>
+<footer class="bg-canvas border-t border-line w-full">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 lg:px-8 py-8 max-w-[1200px] mx-auto gap-4">
+    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-md bg-accent text-white text-xs font-extrabold flex items-center justify-center">L</span><span class="font-extrabold tracking-tight">LedgrPro</span></div>
+    <div class="flex flex-wrap justify-center gap-5">
+      <a class="text-xs text-secondary hover:text-primary" href="pricing.html">Pricing</a>
+      <a class="text-xs text-secondary hover:text-primary" href="security.html">Security</a>
+      <a class="text-xs text-secondary hover:text-primary" href="privacy.html">Privacy</a>
+      <a class="text-xs text-secondary hover:text-primary" href="terms.html">Terms</a>
+      <a class="text-xs text-secondary hover:text-primary" href="contact.html">Contact</a>
     </div>
-  </footer>
-
-</body>
-</html>
+    <div class="text-xs text-secondary font-light">© 2026 LedgrPro. Built for Indian business.</div>
+  </div>
+</footer>
+</body></html>

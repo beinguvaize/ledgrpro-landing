@@ -1,147 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us — StockMate</title>
-  <meta name="description" content="Get support or book a demo. India-first business management platform with fast WhatsApp and email response.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact — LedgrPro</title>
+<meta name="description" content="Talk to the LedgrPro team about sales, support, or enterprise plans."/>
+<link rel="icon" href="logo.svg"/>
+<link rel="canonical" href="https://ledgrpro.com/contact.html"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { primary:'#1A1815', secondary:'#6b6660', surface:'#FBFAF7', canvas:'#FFFFFF', line:'#E9E6DF', accent:'#D97706', 'accent-700':'#B45309' },
+    fontFamily: { sans:['Manrope','sans-serif'], mono:['JetBrains Mono','monospace'] },
+  }}}
+</script>
+<style>.mono{font-variant-numeric:tabular-nums}</style>
 </head>
-<body class="subpage-body">
+<body class="bg-canvas text-primary font-sans antialiased">
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="./index.html" class="navbar-logo">
-        <img src="logo.png" alt="LedgrPro Logo" class="app-logo">
-      </a>
-      <div class="navbar-links" id="navLinks">
-        <a href="./features.html">Features</a>
-        <a href="./index.html#how-it-works">How It Works</a>
-        <a href="./pricing.html">Pricing</a>
-        <a href="./index.html#testimonials">Testimonials</a>
-      </div>
-      <div class="navbar-actions">
-        <a href="./index.html#demo" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text);">Book Demo</a>
-        <a href="#" class="btn btn-secondary">Log In</a>
-        <a href="./pricing.html" class="btn btn-primary">Start Free Trial</a>
-      </div>
+<nav class="bg-canvas/80 backdrop-blur-md border-b border-line w-full sticky top-0 z-50">
+  <div class="flex justify-between items-center w-full px-6 lg:px-8 py-4 max-w-[1200px] mx-auto">
+    <a href="/" class="flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-accent text-white font-extrabold flex items-center justify-center">L</span><span class="text-lg font-extrabold tracking-tight">LedgrPro</span></a>
+    <div class="hidden md:flex gap-7 items-center">
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="features.html">Features</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="integrations.html">Integrations</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="about.html">About</a>
     </div>
-  </nav>
-
-  <!-- ========== HERO ========== -->
-  <section class="subpage-hero">
-    <div class="container">
-      <div class="subpage-hero-content">
-        <h1>Get in <span class="gradient-text">Touch</span>.</h1>
-        <p>Have questions about onboarding or GST settings? Need a personalized demo? We're here to help.</p>
-      </div>
+    <div class="hidden md:flex gap-3 items-center">
+      <a href="https://app.ledgrpro.com/login" class="text-sm font-semibold text-secondary hover:text-primary transition-colors">Sign In</a>
+      <a href="register.html" class="bg-accent text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-accent-700 transition-colors">Get Started</a>
     </div>
-  </section>
+    <a href="register.html" class="md:hidden bg-accent text-white text-sm font-semibold px-4 py-2 rounded-full">Start</a>
+  </div>
+</nav>
 
-  <!-- ========== CONTACT SECTION ========== -->
-  <section class="section">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-form-card">
-          <h2 style="font-weight: 800; margin-bottom: 24px;">Book a Free Demo</h2>
-          <form id="contactForm" onsubmit="event.preventDefault(); alert('Demo request received! Our success specialist will WhatsApp you within 2 hours.');">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-              <div class="form-group">
-                <label>Your Name</label>
-                <input type="text" placeholder="e.g. Anil Sharma" required>
-              </div>
-              <div class="form-group">
-                <label>Mobile / WhatsApp Number</label>
-                <input type="tel" placeholder="e.g. +91 98765 43210" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Business Category</label>
-              <select required>
-                <option value="">Select business type...</option>
-                <option value="retail">Single Retail Shop</option>
-                <option value="wholesale">Wholesale Distributor</option>
-                <option value="manufacturing">Small Manufacturer</option>
-                <option value="logistics">Logistics/Fleet Delivery</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>How can we help you?</label>
-              <textarea rows="4" placeholder="Briefly tell us about your shop or warehouse size..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">Request Demo Call →</button>
-          </form>
-        </div>
-
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 24px;">Support Channels</h3>
-          
-          <div style="margin-bottom: 32px; display: flex; gap: 16px; align-items: flex-start;">
-            <span style="font-size: 1.5rem;">💬</span>
-            <div>
-              <p style="font-weight: 700; color: var(--text); margin-bottom: 4px;">WhatsApp Support</p>
-              <p style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">+91 80 4567 8901</p>
-              <p style="font-size: 0.85rem; color: var(--text-muted);">Available Mon-Sat, 9 AM - 8 PM</p>
-            </div>
-          </div>
-
-          <div style="margin-bottom: 32px; display: flex; gap: 16px; align-items: flex-start;">
-            <span style="font-size: 1.5rem;">📧</span>
-            <div>
-              <p style="font-weight: 700; color: var(--text); margin-bottom: 4px;">Email Support</p>
-              <p style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">support@stockmate.in</p>
-            </div>
-          </div>
-          
-          <div style="border-top: 1px solid var(--border); padding-top: 32px; margin-top: 16px; background: #f8fafc; padding: 24px; border-radius: var(--radius);">
-            <p style="font-weight: 700; color: var(--text); margin-bottom: 8px;">⚡ Fast Response SLA</p>
-            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">We are committed to the real India. Our team guarantees a response time of <strong>under 24 hours</strong> for all support inquiries.</p>
-          </div>
-        </div>
-      </div>
+<main class="max-w-[1100px] mx-auto px-6 lg:px-8 pt-20 lg:pt-28 pb-24 grid lg:grid-cols-2 gap-12">
+  <div>
+    <span class="mono text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Contact</span>
+    <h1 class="mt-4 text-4xl md:text-5xl font-light tracking-tight">Talk to us.</h1>
+    <p class="mt-5 text-secondary font-light leading-relaxed max-w-md">Questions about plans, a demo, or enterprise rollout? We usually reply within a business day.</p>
+    <div class="mt-10 space-y-5">
+      <a href="mailto:hello@ledgrpro.com" class="flex items-center gap-3 group"><span class="w-10 h-10 rounded-xl bg-surface border border-line flex items-center justify-center"><span class="material-symbols-outlined text-accent" style="font-size:18px">mail</span></span><div><div class="text-sm font-medium">Email</div><div class="text-sm text-secondary group-hover:text-accent transition-colors">hello@ledgrpro.com</div></div></a>
+      <a href="https://wa.me/919495770736" class="flex items-center gap-3 group"><span class="w-10 h-10 rounded-xl bg-surface border border-line flex items-center justify-center"><span class="material-symbols-outlined text-accent" style="font-size:18px">chat</span></span><div><div class="text-sm font-medium">WhatsApp</div><div class="text-sm text-secondary group-hover:text-accent transition-colors mono">+91 94957 70736</div></div></a>
+      <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-surface border border-line flex items-center justify-center"><span class="material-symbols-outlined text-accent" style="font-size:18px">schedule</span></span><div><div class="text-sm font-medium">Hours</div><div class="text-sm text-secondary">Mon–Sat · 9am–7pm IST</div></div></div>
     </div>
-  </section>
+  </div>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="./index.html" style="display: inline-block; margin-bottom: 20px;">
-            <img src="logo.png" alt="LedgrPro Logo" style="height: 52px; mix-blend-mode: multiply; opacity: 0.9;">
-          </a>
-          <p>The modern inventory management platform built for businesses that want to grow smarter, not harder.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <a href="./features.html">Features</a>
-          <a href="./pricing.html">Pricing</a>
-          <a href="./integrations.html">Integrations</a>
-          <a href="./changelog.html">Changelog</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="./about.html">About</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./careers.html">Careers</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
-          <a href="./security.html">Security</a>
-        </div>
+  <div class="rounded-2xl border border-line bg-surface p-7 lg:p-8">
+    <form id="cf" class="space-y-4">
+      <div class="grid grid-cols-2 gap-4">
+        <div><label class="text-[11px] font-bold uppercase tracking-wide text-secondary mb-1.5 block">Name</label><input name="name" required class="w-full rounded-xl border border-line bg-canvas px-3.5 py-2.5 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/15"/></div>
+        <div><label class="text-[11px] font-bold uppercase tracking-wide text-secondary mb-1.5 block">Phone</label><input name="phone" class="w-full rounded-xl border border-line bg-canvas px-3.5 py-2.5 text-sm mono outline-none focus:border-accent focus:ring-2 focus:ring-accent/15"/></div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 LedgrPro Platforms Ltd (StockMate). All rights reserved.</p>
-      </div>
+      <div><label class="text-[11px] font-bold uppercase tracking-wide text-secondary mb-1.5 block">Email</label><input name="email" type="email" required class="w-full rounded-xl border border-line bg-canvas px-3.5 py-2.5 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/15"/></div>
+      <div><label class="text-[11px] font-bold uppercase tracking-wide text-secondary mb-1.5 block">How can we help?</label><textarea name="message" rows="5" required class="w-full rounded-xl border border-line bg-canvas px-3.5 py-2.5 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/15 resize-none"></textarea></div>
+      <button type="submit" class="w-full bg-accent text-white text-sm font-semibold px-6 py-3 rounded-xl hover:bg-accent-700 shadow-md shadow-accent/25 transition-colors">Send message →</button>
+      <p id="cnote" class="text-center text-[11px] text-secondary font-light"></p>
+    </form>
+  </div>
+</main>
+
+<footer class="bg-canvas border-t border-line w-full">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 lg:px-8 py-8 max-w-[1200px] mx-auto gap-4">
+    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-md bg-accent text-white text-xs font-extrabold flex items-center justify-center">L</span><span class="font-extrabold tracking-tight">LedgrPro</span></div>
+    <div class="flex flex-wrap justify-center gap-5">
+      <a class="text-xs text-secondary hover:text-primary" href="features.html">Features</a>
+      <a class="text-xs text-secondary hover:text-primary" href="pricing.html">Pricing</a>
+      <a class="text-xs text-secondary hover:text-primary" href="privacy.html">Privacy</a>
+      <a class="text-xs text-secondary hover:text-primary" href="terms.html">Terms</a>
+      <a class="text-xs text-secondary hover:text-primary" href="security.html">Security</a>
     </div>
-  </footer>
+    <div class="text-xs text-secondary font-light">© 2026 LedgrPro. Built for Indian business.</div>
+  </div>
+</footer>
 
-</body>
-</html>
+<script>
+  document.getElementById('cf').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = new FormData(this);
+    var body = encodeURIComponent('Name: '+(f.get('name')||'')+'\nPhone: '+(f.get('phone')||'')+'\nEmail: '+(f.get('email')||'')+'\n\n'+(f.get('message')||''));
+    window.location.href = 'mailto:hello@ledgrpro.com?subject=' + encodeURIComponent('LedgrPro enquiry — '+(f.get('name')||'')) + '&body=' + body;
+    document.getElementById('cnote').textContent = 'Opening your email app…';
+  });
+</script>
+</body></html>
