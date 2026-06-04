@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers — StockMate</title>
+  <title>Careers — LedgrPro</title>
   <meta name="description" content="Small team, high impact, remote-friendly. Build business software that works like India does.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  <!-- Analytics -->
+  <script defer data-domain="ledgrpro.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body class="subpage-body">
 
-  <!-- ========== NAVBAR ========== -->
+    <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="./index.html" class="navbar-logo">
-        <img src="logo.png" alt="LedgrPro Logo" class="app-logo">
+        <img src="logo.svg" alt="LedgrPro Logo" class="app-logo">
       </a>
       <div class="navbar-links" id="navLinks">
-        <a href="./features.html">Features</a>
-        <a href="./index.html#how-it-works">How It Works</a>
-        <a href="./pricing.html">Pricing</a>
-        <a href="./index.html#testimonials">Testimonials</a>
+        <a href="./index.html#features">Features</a>
+        <a href="./index.html#industries">Industries</a>
+        <a href="./index.html#pricing">Pricing</a>
       </div>
       <div class="navbar-actions">
-        <a href="./index.html#demo" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text);">Book Demo</a>
-        <a href="#" class="btn btn-secondary">Log In</a>
-        <a href="./pricing.html" class="btn btn-primary">Start Free Trial</a>
+        <a href="#" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text-muted); transition: var(--transition);" id="loginBtn">Log In</a>
+        <a href="./index.html#downloadModal" class="btn btn-primary" id="trialBtn">Download App</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">☰</button>
       </div>
     </div>
   </nav>
@@ -106,42 +107,75 @@
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+    <!-- ========== FOOTER ========== -->
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="./index.html" style="display: inline-block; margin-bottom: 20px;">
-            <img src="logo.png" alt="LedgrPro Logo" style="height: 52px; mix-blend-mode: multiply; opacity: 0.9;">
+            <img src="logo.svg" alt="LedgrPro Logo" style="height: 44px; filter: brightness(0) invert(1); opacity: 0.85;">
           </a>
-          <p>The modern inventory management platform built for businesses that want to grow smarter, not harder.</p>
+          <p>The modern operations and ledger platform built for businesses that want to grow smarter, not harder.</p>
         </div>
         <div class="footer-col">
           <h4>Product</h4>
-          <a href="./features.html">Features</a>
-          <a href="./pricing.html">Pricing</a>
+          <a href="./index.html#features">Features</a>
+          <a href="./index.html#pricing">Pricing</a>
           <a href="./integrations.html">Integrations</a>
           <a href="./changelog.html">Changelog</a>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
-          <a href="./about.html">About</a>
+          <h4>Support & Company</h4>
+          <a href="./about.html">About Us</a>
           <a href="./blog.html">Blog</a>
           <a href="./careers.html">Careers</a>
-          <a href="./contact.html">Contact</a>
+          <a href="./contact.html">Contact Support</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
           <a href="./privacy.html">Privacy Policy</a>
           <a href="./terms.html">Terms of Service</a>
-          <a href="./security.html">Security</a>
+          <a href="./security.html">Security Protocol</a>
         </div>
       </div>
+
+      <div class="footer-locations" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 30px;">
+        <div class="location">
+          <h4 style="font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; color: rgba(255,255,255,0.45);">India</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.65;">Poyisha Rd<br>North Edappally<br>Ernakulam</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; color: rgba(255,255,255,0.45);">London</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.65;">126 Richmond Road, Ilford<br>London, 1G1 1JU</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; color: rgba(255,255,255,0.45);">Qatar</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.65;">Doha</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; color: rgba(255,255,255,0.45);">Canada</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.65;">5415 Cogswell St Halifax<br>B3J 0K8</p>
+        </div>
+      </div>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 LedgrPro Platforms Ltd (StockMate). All rights reserved.</p>
+        <span>© 2026 LedgrPro. All rights reserved.</span>
+        <span>Built for high-performance commerce</span>
       </div>
     </div>
   </footer>
 
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+      if (navLinks.classList.contains('mobile-active')) {
+        navLinks.classList.remove('mobile-active');
+      } else {
+        navLinks.classList.add('mobile-active');
+      }
+    });
+  </script>
 </body>
 </html>
