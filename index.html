@@ -1,1072 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LedgrPro — Inventory & Business Intelligence Platform</title>
-  <meta name="description" content="LedgrPro is the modern inventory management and business intelligence platform. Track stock, analyze margins, and grow smarter. Start your free 30-day trial today.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LedgrPro — GST Billing &amp; Inventory Software for Indian Businesses</title>
+<meta name="description" content="Create GST invoices, track stock, recover dues, and export GSTR reports. Works offline. Free mobile app. Try free for 30 days — no credit card required."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ledgrpro.com/"/>
+<meta property="og:title" content="LedgrPro — GST Billing &amp; Inventory Software for Indian Businesses"/>
+<meta property="og:description" content="Create GST invoices, track stock, recover dues, and export GSTR reports. Works offline. Free mobile app. Try free for 30 days."/>
+<meta property="og:image" content="https://ledgrpro.com/og.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="LedgrPro — GST Billing &amp; Inventory Software"/>
+<meta name="twitter:description" content="GST invoices, POS, inventory, van sales — one platform for Indian retailers &amp; distributors."/>
+<meta name="twitter:image" content="https://ledgrpro.com/og.webp"/>
+<link rel="icon" href="logo.svg"/>
+<link rel="canonical" href="https://ledgrpro.com/"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: {
+      primary: '#1A1815', secondary: '#6b6660', surface: '#FBFAF7',
+      canvas: '#FFFFFF', line: '#E9E6DF', accent: '#D97706', 'accent-700': '#B45309',
+    },
+    fontFamily: { sans: ['Manrope','sans-serif'], mono: ['JetBrains Mono','monospace'] },
+  }}}
+</script>
+<style>
+  .parallax{background-attachment:fixed;background-position:center;background-size:cover;background-repeat:no-repeat}
+  @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  .logo-track{display:flex;width:max-content;animation:scroll 32s linear infinite}
+  .mono{font-variant-numeric:tabular-nums}
+  .reveal{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+  .group:hover .reveal{grid-template-rows:1fr}
+</style>
 </head>
-<body>
+<body class="bg-canvas text-primary font-sans antialiased">
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#" class="navbar-logo">
-        <img src="logo.png" alt="LedgrPro Logo" class="app-logo">
-      </a>
-      <div class="navbar-links" id="navLinks">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#testimonials">Testimonials</a>
-      </div>
-      <div class="navbar-actions">
-        <a href="#demo" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text);">Book Demo</a>
-        <a href="#" class="btn btn-secondary" id="loginBtn">Log In</a>
-        <a href="#pricing" class="btn btn-primary" id="trialBtn">Start Free Trial</a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">☰</button>
-      </div>
+<!-- Nav -->
+<nav class="bg-canvas/80 backdrop-blur-md border-b border-line w-full sticky top-0 z-50">
+  <div class="flex justify-between items-center w-full px-6 lg:px-8 py-4 max-w-[1200px] mx-auto">
+    <a href="/" class="flex items-center gap-2">
+      <span class="w-7 h-7 rounded-lg bg-accent text-white font-extrabold flex items-center justify-center">L</span>
+      <span class="text-lg font-extrabold tracking-tight">LedgrPro</span>
+    </a>
+    <div class="hidden md:flex gap-7 items-center">
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="features.html">Features</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="integrations.html">Integrations</a>
+      <a class="text-sm font-medium text-secondary hover:text-primary transition-colors" href="about.html">About</a>
     </div>
-  </nav>
+    <div class="hidden md:flex gap-3 items-center">
+      <a href="https://app.ledgrpro.com/login" class="text-sm font-semibold text-secondary hover:text-primary transition-colors">Sign In</a>
+      <a href="https://app.ledgrpro.com/signup" class="bg-accent text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-accent-700 transition-colors">Get Started</a>
+    </div>
+    <a href="https://app.ledgrpro.com/signup" class="md:hidden bg-accent text-white text-sm font-semibold px-4 py-2 rounded-full">Start</a>
+  </div>
+</nav>
 
-  <!-- ========== HERO (Split-Layout Monochrome) ========== -->
-  <section class="hero-modern" id="hero">
-    <div class="hero-bg-monochrome"></div>
-    
-    <div class="container">
-      <div class="hero-split">
-        <!-- Left Content -->
-        <div class="hero-left">
-          <div class="hero-badge">
-            <span class="pulse-dot"></span> Trusted by 2,400+ businesses across 4 countries
-          </div>
-          <h1 class="hero-h1">The intelligent operating system for <span class="text-highlight">modern business.</span></h1>
-          <p class="hero-sub">LedgrPro unifies your inventory, POS, finance, and logistics into a single, high-performance platform. Fully localized for multi-regional compliance and day book reconciliation.</p>
-          
-          <ul class="hero-feature-list">
-            <li><span class="check">✓</span> Accurate WAC Costing & Margin Tracking</li>
-            <li><span class="check">✓</span> Multi-Warehouse Inventory Synchronization</li>
-            <li><span class="check">✓</span> Precise Automated Day Book & GST Ledger</li>
-          </ul>
+<main class="w-full">
 
-          <div class="hero-actions">
-            <a href="#pricing" class="btn btn-primary btn-large">Start Free 30-Day Trial</a>
-            <a href="#demo" class="btn btn-secondary btn-large">See It In Action →</a>
-          </div>
-          
-        </div>
+  <!-- Title -->
+  <section class="max-w-[1200px] mx-auto px-6 lg:px-8 pt-24 lg:pt-32 pb-12">
+    <span class="mono text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">GST Billing · Inventory · POS · Offline</span>
+    <h1 class="mt-5 text-4xl md:text-6xl font-light text-primary max-w-4xl leading-[1.05] tracking-tight">
+      Run your shop on one<br/>quiet, fast, offline ledger.
+    </h1>
+    <p class="mt-6 max-w-2xl text-base text-secondary leading-relaxed font-light">
+      Create GST invoices, track stock in real time, recover dues, and file GSTR — on web, desktop and a free mobile app. Works offline, syncs when you're back.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center gap-3">
+      <a href="https://app.ledgrpro.com/signup" class="bg-accent text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-accent-700 transition-colors shadow-lg shadow-accent/20">Try free for 30 days</a>
+      <a href="features.html" class="text-sm font-semibold text-primary px-6 py-3 rounded-full border border-line hover:bg-surface transition-colors">See features</a>
+      <span class="text-xs text-secondary font-light">No credit card required</span>
+    </div>
+  </section>
 
-        <!-- Right Visuals (Dynamic Floating Widgets restored per User directive) -->
-        <div class="hero-right">
-          <div class="glass-widget widget-main">
-            <div class="widget-header">
-              <span>Live Performance</span>
-              <span class="badge">Today</span>
-            </div>
-            <div class="widget-metric">
-              <span class="metric-value">$124,500</span>
-              <span class="metric-trend up">↑ 14.2%</span>
-            </div>
-            <div class="widget-chart">
-              <div class="bar" style="height: 40%"></div>
-              <div class="bar" style="height: 60%"></div>
-              <div class="bar" style="height: 35%"></div>
-              <div class="bar" style="height: 80%"></div>
-              <div class="bar" style="height: 100%"></div>
-              <div class="bar" style="height: 65%"></div>
-              <div class="bar" style="height: 90%"></div>
-            </div>
-          </div>
+  <!-- Hero image -->
+  <section class="px-6 lg:px-8 pb-24">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="w-full h-[360px] md:h-[520px] parallax rounded-[20px] overflow-hidden border border-line shadow-2xl" style="background-image:url('hero-screenshot.webp')"></div>
+    </div>
+  </section>
 
-          <div class="glass-widget widget-secondary float-anim-1">
-            <div class="widget-icon">📦</div>
-            <div class="widget-text">
-              <span class="title">Stock Level</span>
-              <span class="desc">98% Optimal</span>
-            </div>
-          </div>
-
-          <div class="glass-widget widget-tertiary float-anim-2">
-            <div class="widget-header-small">
-              <span>Recent Invoices</span>
-            </div>
-            <div class="invoice-list">
-              <div class="invoice-item">
-                <div class="inv-info"><span class="inv-name">INV-4029</span><span class="inv-client">Nexus Ltd</span></div>
-                <div class="inv-status paid">Paid</div>
-              </div>
-              <div class="invoice-item">
-                <div class="inv-info"><span class="inv-name">INV-4030</span><span class="inv-client">Acme Corp</span></div>
-                <div class="inv-status pending">Pending</div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- Trust roll -->
+  <section class="w-full overflow-hidden py-8 mb-12 border-y border-line bg-surface">
+    <div class="logo-track opacity-60">
+      <div class="flex items-center gap-20 pr-20 text-secondary">
+        <span class="text-sm font-bold tracking-wide">GST READY</span>
+        <span class="text-sm font-light tracking-[0.2em]">OFFLINE POS</span>
+        <span class="text-sm font-medium">FIFO INVENTORY</span>
+        <span class="text-sm font-semibold uppercase">VAN SALES</span>
+        <span class="text-sm tracking-wide">FREE MOBILE APP</span>
+        <span class="text-sm font-bold">GSTR EXPORT</span>
+      </div>
+      <div class="flex items-center gap-20 pr-20 text-secondary">
+        <span class="text-sm font-bold tracking-wide">GST READY</span>
+        <span class="text-sm font-light tracking-[0.2em]">OFFLINE POS</span>
+        <span class="text-sm font-medium">FIFO INVENTORY</span>
+        <span class="text-sm font-semibold uppercase">VAN SALES</span>
+        <span class="text-sm tracking-wide">FREE MOBILE APP</span>
+        <span class="text-sm font-bold">GSTR EXPORT</span>
       </div>
     </div>
   </section>
 
-  <!-- ========== PROBLEM VS SOLUTION SECTION ========== -->
-  <section class="section" style="background: #ffffff; border-bottom: 1px solid var(--border);">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 40px;">
-        <div class="section-label">The Modern Shift</div>
-        <h2 class="section-title">Why Indian Businesses Are Moving Away<br>From Legacy Software</h2>
+  <!-- Split feature section -->
+  <section class="w-full bg-surface border-y border-line">
+    <div class="flex flex-col lg:flex-row w-full min-h-[640px] max-w-[1200px] mx-auto">
+
+      <!-- Left: app card mock -->
+      <div class="w-full lg:w-3/5 relative flex items-center justify-center overflow-hidden group p-6 lg:p-10">
+        <img src="app-screenshot.webp" alt="LedgrPro app" class="absolute inset-0 w-full h-full object-cover opacity-10 transition-transform duration-1000 group-hover:scale-105"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-surface/90 to-transparent"></div>
+        <div class="relative z-10 w-full max-w-xl bg-canvas/95 backdrop-blur-xl border border-line rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:-translate-y-1">
+          <div class="px-5 py-4 border-b border-line flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-accent"></span>
+              <h4 class="text-sm font-semibold tracking-wide">New Invoice</h4>
+            </div>
+            <span class="mono text-[11px] text-secondary">INV/2026/0231</span>
+          </div>
+          <div class="p-6 space-y-5">
+            <div class="grid grid-cols-2 gap-5">
+              <div><label class="text-[10px] font-semibold text-secondary mb-1.5 block tracking-wider uppercase">Client</label><div class="bg-surface rounded-lg px-3 h-10 flex items-center text-sm border border-line">Aisha Store</div></div>
+              <div><label class="text-[10px] font-semibold text-secondary mb-1.5 block tracking-wider uppercase">GSTIN</label><div class="bg-surface rounded-lg px-3 h-10 flex items-center text-sm mono border border-line">33QKYP…1Z7</div></div>
+            </div>
+            <div class="rounded-lg border border-line divide-y divide-line">
+              <div class="flex items-center justify-between px-3 py-2.5 text-sm"><span>Paper Cup 250ml ×40</span><span class="mono font-semibold">₹4,800</span></div>
+              <div class="flex items-center justify-between px-3 py-2.5 text-sm"><span>Food Container ×20</span><span class="mono font-semibold">₹1,300</span></div>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <span class="text-[11px] font-bold uppercase tracking-widest text-secondary">Total · incl GST</span>
+              <span class="mono text-2xl font-bold"><span class="text-accent/50 text-lg mr-0.5">₹</span>6,100</span>
+            </div>
+            <div class="flex justify-end gap-3 items-center pt-1">
+              <button class="text-sm font-semibold text-secondary hover:text-primary">Save draft</button>
+              <button class="bg-accent text-white text-sm px-5 py-2.5 rounded-full font-bold hover:bg-accent-700 transition-colors">Create &amp; print</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-        
-        <div style="background:#f8fafc; padding: 32px; border-radius: 16px; border: 1px solid #e2e8f0;">
-          <span style="font-size: 1.5rem;">🤦🏽‍♂️</span>
-          <h4 style="margin: 15px 0 10px; font-weight: 800; color: #0f172a;">Tally Fatigue</h4>
-          <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 15px;">Complex menus, expensive support, and built exclusively for accountants, leaving store owners entirely in the dark.</p>
-          <div style="border-top: 1px dashed #cbd5e1; padding-top: 15px; margin-top: 15px;">
-            <span style="color: var(--primary); font-weight: 700; font-size: 0.85rem; display: block; margin-bottom: 5px;">THE LEDGRPRO FIX:</span>
-            <p style="font-weight: 600; color: #0f172a;">100% Visual Dashboards. Zero complex training required. Anyone can bill.</p>
+
+      <!-- Right: reveal list -->
+      <div class="w-full lg:w-2/5 bg-canvas border-l border-line p-6 lg:p-10 flex flex-col">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="material-symbols-outlined text-accent" style="font-size:26px">insights</span>
+          <h2 class="text-3xl font-light tracking-tight">One platform, end to end</h2>
+        </div>
+        <p class="text-secondary text-sm mb-10 leading-relaxed font-light max-w-md">
+          From the counter to the books — billing, stock, collections and compliance stay in sync across every device, online or off.
+        </p>
+        <div class="space-y-1 mt-auto">
+          <div class="group cursor-pointer">
+            <div class="border-t border-line pt-6 pb-4 relative overflow-hidden">
+              <div class="absolute top-0 left-0 h-[2px] bg-accent w-1/3 transition-all duration-500 group-hover:w-full"></div>
+              <h3 class="text-lg font-medium mb-2">Bill in seconds</h3>
+              <div class="reveal"><p class="text-sm text-secondary overflow-hidden leading-relaxed pr-4 font-light">GST-correct invoices, POS receipts and UPI QR — print or share instantly, even offline.</p></div>
+            </div>
+          </div>
+          <div class="group cursor-pointer">
+            <div class="border-t border-line pt-6 pb-4 relative overflow-hidden">
+              <div class="absolute top-0 left-0 h-[2px] bg-accent w-0 transition-all duration-500 group-hover:w-full"></div>
+              <h3 class="text-lg font-medium text-secondary group-hover:text-primary mb-2 transition-colors">Track every unit</h3>
+              <div class="reveal"><p class="text-sm text-secondary overflow-hidden leading-relaxed pr-4 font-light">FIFO costing, batches, low-stock alerts and multi-store inventory that always ties out.</p></div>
+            </div>
+          </div>
+          <div class="group cursor-pointer">
+            <div class="border-t border-line pt-6 pb-4 relative overflow-hidden">
+              <div class="absolute top-0 left-0 h-[2px] bg-accent w-0 transition-all duration-500 group-hover:w-full"></div>
+              <h3 class="text-lg font-medium text-secondary group-hover:text-primary mb-2 transition-colors">Recover &amp; report</h3>
+              <div class="reveal"><p class="text-sm text-secondary overflow-hidden leading-relaxed pr-4 font-light">Track dues, send reminders, settle payments and export GSTR-ready reports in a click.</p></div>
+            </div>
           </div>
         </div>
-
-        <div style="background:#f8fafc; padding: 32px; border-radius: 16px; border: 1px solid #e2e8f0;">
-          <span style="font-size: 1.5rem;">📶</span>
-          <h4 style="margin: 15px 0 10px; font-weight: 800; color: #0f172a;">Unstable Internet</h4>
-          <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 15px;">Cloud-only software crashes during peaks or outages, causing queues and frustrated counter customers.</p>
-          <div style="border-top: 1px dashed #cbd5e1; padding-top: 15px; margin-top: 15px;">
-            <span style="color: var(--primary); font-weight: 700; font-size: 0.85rem; display: block; margin-bottom: 5px;">THE LEDGRPRO FIX:</span>
-            <p style="font-weight: 600; color: #0f172a;">Optimized Cloud POS architecture. Designed for zero-latency processing, keeping your billing queue moving fast.</p>
-          </div>
-        </div>
-
-        <div style="background:#f8fafc; padding: 32px; border-radius: 16px; border: 1px solid #e2e8f0;">
-          <span style="font-size: 1.5rem;">🗃️</span>
-          <h4 style="margin: 15px 0 10px; font-weight: 800; color: #0f172a;">GST Panic</h4>
-          <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 15px;">End-of-month reconciliation errors, manual HSN matching, and surprise tax liability reports.</p>
-          <div style="border-top: 1px dashed #cbd5e1; padding-top: 15px; margin-top: 15px;">
-            <span style="color: var(--primary); font-weight: 700; font-size: 0.85rem; display: block; margin-bottom: 5px;">THE LEDGRPRO FIX:</span>
-            <p style="font-weight: 600; color: #0f172a;">Automatic tax bracket identification at point of entry. Simple, clear reports.</p>
-          </div>
-        </div>
-
       </div>
+
     </div>
   </section>
 
-  <!-- ========== STICKY SCROLL SHOWCASE (Complete Guided Tour) ========== -->
-  <section class="sticky-showcase" id="guided-tour">
-    <div class="sticky-container">
-      
-      <!-- Left: Pinned Visuals -->
-      <div class="sticky-visuals">
-        <div class="sticky-visuals-inner">
-          <!-- Base image rotation matched to steps -->
-          <img src="3d-dashboard.png" id="base-img-1" class="sticky-base-img active">
-          <img src="3d-inventory.png" id="base-img-2" class="sticky-base-img">
-          <img src="3d-pos.png"       id="base-img-3" class="sticky-base-img">
-          <img src="3d-finance.png"   id="base-img-4" class="sticky-base-img">
-          <img src="3d-crm.png"       id="base-img-5" class="sticky-base-img">
-          <img src="3d-logistics.png" id="base-img-6" class="sticky-base-img">
-          <img src="3d-admin.png"     id="base-img-7" class="sticky-base-img">
-          
-          <!-- 1. Dashboard Overlay -->
-          <div class="sticky-overlay active" id="overlay-step-1">
-            <div class="focus-ring" style="top: 15%; left: 40%;"></div>
-            <div class="glass-widget float-anim-1" style="position: absolute; top: 10%; left: 50%; padding: 15px; width: auto;">
-              <span class="metric-trend up">↑ Real-Time Overview</span>
-            </div>
-          </div>
-          
-          <!-- 2. Inventory Overlay -->
-          <div class="sticky-overlay" id="overlay-step-2">
-            <div class="focus-ring" style="top: 55%; left: 25%;"></div>
-            <div class="glass-widget float-anim-2" style="position: absolute; top: 45%; left: 5%; padding: 15px; width: auto; background: var(--primary); color: white;">
-              <span>📦 Low Stock Sync</span>
-            </div>
-          </div>
-          
-          <!-- 3. POS Overlay -->
-          <div class="sticky-overlay" id="overlay-step-3">
-            <div class="focus-ring" style="top: 40%; right: 20%;"></div>
-            <div class="glass-widget float-anim-1" style="position: absolute; top: 25%; right: 25%; padding: 15px; width: auto; background: #10b981; color: white;">
-              <span>⚡ Swift Terminal</span>
-            </div>
-          </div>
-
-          <!-- 4. Finance Overlay -->
-          <div class="sticky-overlay" id="overlay-step-4">
-            <div class="focus-ring" style="top: 30%; left: 30%;"></div>
-            <div class="glass-widget float-anim-2" style="position: absolute; bottom: 20%; left: 35%; padding: 15px; width: auto; border: 1px solid var(--border);">
-              <span style="font-weight:700;">📊 GST Invoicing Ready</span>
-            </div>
-          </div>
-
-          <!-- 5. CRM Overlay -->
-          <div class="sticky-overlay" id="overlay-step-5">
-            <div class="focus-ring" style="top: 15%; right: 40%;"></div>
-            <div class="glass-widget float-anim-1" style="position: absolute; top: 10%; right: 15%; padding: 15px; width: auto; border: 1px solid #4ba3ff;">
-              <span>👥 Client Tier: VIP</span>
-            </div>
-          </div>
-
-          <!-- 6. Logistics Overlay -->
-          <div class="sticky-overlay" id="overlay-step-6">
-            <div class="focus-ring" style="top: 65%; right: 30%;"></div>
-            <div class="glass-widget float-anim-2" style="position: absolute; bottom: 15%; right: 10%; padding: 15px; width: auto; background: #f1f5f9;">
-              <span style="color:#0f172a;">🚚 Dispatch Tracking</span>
-            </div>
-          </div>
-
-          <!-- 7. Admin Overlay -->
-          <div class="sticky-overlay" id="overlay-step-7">
-            <div class="focus-ring" style="top: 10%; left: 10%;"></div>
-            <div class="glass-widget float-anim-1" style="position: absolute; top: 5%; left: 15%; padding: 15px; width: auto;">
-              <span>⚙️ Role Permissions</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Right: Scroll Content -->
-      <div class="sticky-content">
-        <div class="scroll-step" data-step="1">
-          <div class="step-badge">01 / Dashboard</div>
-          <h2 class="step-title">Command Center</h2>
-          <p class="step-desc">A high-level operational map of your business. Instant daily trend charts, KPI ribbons, and outstanding accounts at a glance.</p>
-        </div>
-        
-        <div class="scroll-step" data-step="2">
-          <div class="step-badge">02 / Inventory</div>
-          <h2 class="step-title">Automated Stock</h2>
-          <p class="step-desc">WAC valuation, low-stock thresholds, manual delta adjustments, and batch tracking. Never lose track of a single unit.</p>
-        </div>
-        
-        <div class="scroll-step" data-step="3">
-          <div class="step-badge">03 / Sales & POS</div>
-          <h2 class="step-title">High-Speed Trading</h2>
-          <p class="step-desc">Multi-item billing, split payments, counter pickups, and delivery sales with automated generation of credit notes and invoices.</p>
-        </div>
-
-        <div class="scroll-step" data-step="4">
-          <div class="step-badge">04 / Finance</div>
-          <h2 class="step-title">Clean Compliance</h2>
-          <p class="step-desc">Automate daybooks, reconcile payments, manage ledgers, and accurately compute tax liabilities instantly.</p>
-        </div>
-
-        <div class="scroll-step" data-step="5">
-          <div class="step-badge">05 / CRM</div>
-          <h2 class="step-title">Client Intelligence</h2>
-          <p class="step-desc">Store credit balances, map custom price tiers to individual clients, and maintain complete transaction histories.</p>
-        </div>
-
-        <div class="scroll-step" data-step="6">
-          <div class="step-badge">06 / Logistics</div>
-          <h2 class="step-title">Frictionless Dispatch</h2>
-          <p class="step-desc">Move orders to packed, shipped, and delivered statuses seamlessly. Real-time delivery tracking ensures zero lost packages.</p>
-        </div>
-
-        <div class="scroll-step" data-step="7">
-          <div class="step-badge">07 / Admin</div>
-          <h2 class="step-title">Ironclad Control</h2>
-          <p class="step-desc">Role-based permission grids, employee audit trails, API configuration, and global workspace settings.</p>
-        </div>
-      </div>
-      
-    </div>
+  <!-- CTA -->
+  <section class="max-w-[1200px] mx-auto px-6 lg:px-8 py-24 text-center">
+    <h2 class="text-3xl md:text-4xl font-light tracking-tight">Start billing in five minutes.</h2>
+    <p class="mt-4 text-secondary font-light">Free for 30 days. Free mobile app forever. No card needed.</p>
+    <a href="https://app.ledgrpro.com/signup" class="inline-block mt-8 bg-accent text-white text-sm font-semibold px-7 py-3.5 rounded-full hover:bg-accent-700 transition-colors shadow-lg shadow-accent/20">Create your workspace</a>
   </section>
+</main>
 
-
-  <!-- ========== COMPREHENSIVE PLATFORM MODULES ========== -->
-  <section class="section" id="features">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label">✦ Full-Stack ERP</div>
-        <h2 class="section-title">Everything You Need to<br><span class="gradient-text">Run Your Business</span></h2>
-        <p class="section-subtitle mx-auto">A professional, modern, and fully integrated ecosystem combining POS, Inventory, Finance, and Administration.</p>
-      </div>
-
-      <div class="erp-showcase">
-        <div class="erp-sidebar">
-          <button class="erp-tab active" data-target="erp-dashboard">
-            <span class="icon">🏠</span> <span>Dashboard</span>
-          </button>
-          <button class="erp-tab" data-target="erp-inventory">
-            <span class="icon">📦</span> <span>Inventory & Orders</span>
-          </button>
-          <button class="erp-tab" data-target="erp-sales">
-            <span class="icon">🛒</span> <span>Sales, POS & Invoices</span>
-          </button>
-          <button class="erp-tab" data-target="erp-finance">
-            <span class="icon">💸</span> <span>Finance & Payroll</span>
-          </button>
-          <button class="erp-tab" data-target="erp-crm">
-            <span class="icon">👥</span> <span>Clients & Suppliers</span>
-          </button>
-          <button class="erp-tab" data-target="erp-logistics">
-            <span class="icon">🚚</span> <span>Logistics & Reports</span>
-          </button>
-          <button class="erp-tab" data-target="erp-admin">
-            <span class="icon">⚙️</span> <span>Admin & Security</span>
-          </button>
-        </div>
-
-        <div class="erp-content">
-          <!-- DASHBOARD -->
-          <div class="erp-pane active" id="erp-dashboard">
-            <div class="pane-header">
-              <h3>Real-Time Dashboard</h3>
-              <p>Your business pulse at a glance with instant metrics and trends.</p>
-            </div>
-            <div class="pane-grid">
-              <div class="pane-card">
-                <h4>Dynamic KPIs</h4>
-                <p>Revenue, expenses, profit, and purchases with custom date ranges (Today to Last Month).</p>
-              </div>
-              <div class="pane-card">
-                <h4>Visual Analytics</h4>
-                <p>Daily sales trend (bar), sales by category (pie), and Week-over-Week growth %.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Instant Alerts</h4>
-                <p>Live recent transactions feed, low stock alerts, and client outstanding summary.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- INVENTORY & ORDERS -->
-          <div class="erp-pane" id="erp-inventory">
-            <div class="pane-header">
-              <h3>Inventory & Orders</h3>
-              <p>Complete control over stock, pricing, and fulfillment pipelines.</p>
-            </div>
-            <div class="pane-grid">
-              <div class="pane-card">
-                <h4>Product Management</h4>
-                <p>SKU, barcode, category, GST tax slab, margins, photos, tags, and low stock thresholds.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Advanced Tracking</h4>
-                <p>Batch tracking per product, custom price lists, and manual stock adjustment with reasoning.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Order Pipeline</h4>
-                <p>Stages: pending, active, done. Advance orders through stages and expand order details.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- SALES & POS -->
-          <div class="erp-pane" id="erp-sales">
-            <div class="pane-header">
-              <h3>Sales (POS) & Invoices</h3>
-              <p>Lightning-fast checkouts and comprehensive invoice management.</p>
-            </div>
-            <div class="pane-grid">
-              <div class="pane-card">
-                <h4>Modern POS</h4>
-                <p>Multi-item sale for walk-in or linked clients. Cash, Credit, or Bank/UPI payments. Receipt print.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Invoice Engine</h4>
-                <p>Auto-invoice creation, GST/non-GST toggle, and partial/full settlement. Export to PDF.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Flexible Fulfillment</h4>
-                <p>Counter pickup or delivery types. Manage sales returns (Credit Notes) smoothly.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FINANCE & PAYROLL -->
-          <div class="erp-pane" id="erp-finance">
-            <div class="pane-header">
-              <h3>Finance, DayBook & Payroll</h3>
-              <p>Streamlined accounting, daily cash tracking, and team compensation.</p>
-            </div>
-            <div class="pane-grid">
-              <div class="pane-card">
-                <h4>Expenses & Purchases</h4>
-                <p>Multi-item purchase entry with WAC auto-update. Track expenses across categories.</p>
-              </div>
-              <div class="pane-card">
-                <h4>DayBook Tracking</h4>
-                <p>Daily cash tracking: opening balance, net cash, physical cash count with variance tracking.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Integrated Payroll</h4>
-                <p>Employee directory, monthly bulk pay runs, and salary payment tracking per employee.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- CLIENTS & SUPPLIERS -->
-          <div class="erp-pane" id="erp-crm">
-            <div class="pane-header">
-              <h3>Clients & Suppliers (CRM)</h3>
-              <p>Build relationships and manage your supply chain efficiently.</p>
-            </div>
-            <div class="pane-grid">
-              <div class="pane-card">
-                <h4>Client Portal</h4>
-                <p>Directory, aging outstanding, payment history, and per-client statement generation.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Supplier Ledger</h4>
-                <p>Full transaction history, running balance, and KPIs (total outstanding, total paid).</p>
-              </div>
-              <div class="pane-card">
-                <h4>Settlements</h4>
-                <p>Record payments against specific invoices and manage purchase returns (Debit Notes).</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- LOGISTICS & REPORTS -->
-          <div class="erp-pane" id="erp-logistics">
-            <div class="pane-header">
-              <h3>Logistics & Analytics</h3>
-              <p>Dispatch management and comprehensive business reporting.</p>
-            </div>
-            <div class="pane-grid">
-              <div class="pane-card">
-                <h4>Vehicles & Deliveries</h4>
-                <p>Dispatch routes, assign vehicles, reconcile route cash, and mark stops with proof of delivery.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Accounting Reports</h4>
-                <p>Balance Sheet, Trial Balance, General Ledger, Cash Flow, P&L, AR/AP Aging.</p>
-              </div>
-              <div class="pane-card">
-                <h4>GST Compliance</h4>
-                <p>Detailed sales tax transaction summaries and internal operational reports for fast calculation.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- ADMIN & SECURITY -->
-          <div class="erp-pane" id="erp-admin">
-            <div class="pane-header">
-              <h3>Platform Admin & Security</h3>
-              <p>Enterprise-grade control, authentication, and data management.</p>
-            </div>
-            <div class="pane-grid">
-              <div class="pane-card">
-                <h4>Users & Permissions</h4>
-                <p>Invite via email. Roles: Owner, Manager, Staff, Driver. Per-module read/write permissions.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Multi-tenant Auth</h4>
-                <p>Email login, per-tenant slug routing, protected routes, and Global Super Admin portal.</p>
-              </div>
-              <div class="pane-card">
-                <h4>Data & Audit</h4>
-                <p>Paginated audit logs (who, what, when). Bulk CSV import/export for products, clients, inventory.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- Footer -->
+<footer class="bg-canvas border-t border-line w-full">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 lg:px-8 py-8 max-w-[1200px] mx-auto gap-4">
+    <div class="flex items-center gap-2"><span class="w-6 h-6 rounded-md bg-accent text-white text-xs font-extrabold flex items-center justify-center">L</span><span class="font-extrabold tracking-tight">LedgrPro</span></div>
+    <div class="flex flex-wrap justify-center gap-5">
+      <a class="text-xs text-secondary hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+      <a class="text-xs text-secondary hover:text-primary transition-colors" href="security.html">Security</a>
+      <a class="text-xs text-secondary hover:text-primary transition-colors" href="privacy.html">Privacy</a>
+      <a class="text-xs text-secondary hover:text-primary transition-colors" href="terms.html">Terms</a>
+      <a class="text-xs text-secondary hover:text-primary transition-colors" href="contact.html">Contact</a>
     </div>
-  </section>
+    <div class="text-xs text-secondary font-light">© 2026 LedgrPro. Built for Indian business.</div>
+  </div>
+</footer>
 
-  <!-- ========== HOW IT WORKS ========== -->
-  <section class="section" id="how-it-works">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label">⚡ How It Works</div>
-        <h2 class="section-title">Up and Running<br><span class="gradient-text">in 3 Simple Steps</span></h2>
-        <p class="section-subtitle mx-auto">No complex setup. No training required. Just sign up and start managing.</p>
-      </div>
-      <div class="steps">
-        <div class="step" id="step1">
-          <div class="step-number">01</div>
-          <h3>Create Your Account</h3>
-          <p>Sign up in 30 seconds with just your email. Instant access to setup wizards tailored for Indian SMB requirements.</p>
-        </div>
-        <div class="step" id="step2">
-          <div class="step-number">02</div>
-          <h3>Connect & Import</h3>
-          <p>Effortlessly migrate from Tally, upload CSV batches, or map existing data. Zero system downtime during transition.</p>
-        </div>
-        <div class="step" id="step3">
-          <div class="step-number">03</div>
-          <h3>Command & Scale</h3>
-          <p>Fully integrate your Day Books, run high-speed POS, and analyze multi-warehouse growth cycles daily.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PRICING ========== -->
-  <section class="section" id="pricing">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label">💎 Pricing</div>
-        <h2 class="section-title">Simple, Transparent<br><span class="gradient-text">Pricing</span></h2>
-        
-        <!-- Annual Toggle (Default to Annual) -->
-        <div class="price-toggle-container" style="display: flex; align-items: center; justify-content: center; gap: 15px; margin: 30px 0;">
-          <span id="monthlyLabel" style="color: var(--text-muted); font-weight: 400;">Monthly</span>
-          <label class="switch">
-            <input type="checkbox" id="billingToggle" checked>
-            <span class="slider round"></span>
-          </label>
-          <span id="yearlyLabel" style="font-weight: 600; color: var(--text);">Annually <span style="background: #dcfce7; color: #166534; font-size: 0.75rem; padding: 2px 8px; border-radius: 20px; font-weight: 700; margin-left: 5px;">🔥 Save up to 23%</span></span>
-        </div>
-        
-        <p class="section-subtitle mx-auto">Every plan includes a full 30-day (1 month) free trial. All Growth features unlocked. No credit card needed.</p>
-      </div>
-
-      <div class="pricing-grid">
-        <!-- Starter -->
-        <div class="pricing-card" id="planStarter">
-          <div class="plan-name">Starter</div>
-          <div class="price">₹<span class="price-val" data-monthly="249" data-yearly="199">199</span><span class="price-period">/mo</span></div>
-          <div class="period">Billed annually</div>
-          <div class="trial-badge" style="background:#f1f5f9; color:#64748b;">Perfect for single retail shops</div>
-          <ul class="pricing-features">
-            <li><span class="check">✓</span> Dashboard & Inventory</li>
-            <li><span class="check">✓</span> Cloud & Mobile POS Terminal</li>
-            <li><span class="check">✓</span> Clients & Expenses Tracking</li>
-            <li><span class="check">✓</span> Day Book & Invoices</li>
-            <li><span class="check">✓</span> Max 2 Users</li>
-            <li><span class="check">✓</span> 500 Invoices / month</li>
-          </ul>
-          <a href="#" class="btn btn-secondary" id="starterCta">Start 30-Day Free Trial</a>
-        </div>
-
-        <!-- Growth (Replacd Pro) -->
-        <div class="pricing-card popular" id="planPro">
-          <div class="plan-name">Growth</div>
-          <div class="price">₹<span class="price-val" data-monthly="599" data-yearly="499">499</span><span class="price-period">/mo</span></div>
-          <div class="period">Billed annually</div>
-          <div class="trial-badge" style="background:var(--primary); color:white;">🚀 Top Choice: Wholesalers & GST</div>
-          <ul class="pricing-features">
-            <li><span class="check">✓</span> <strong>All Starter Features +</strong></li>
-            <li><span class="check">✓</span> <strong>Multi-Location Inventory</strong></li>
-            <li><span class="check">✓</span> Purchases & Supplier Ledger</li>
-            <li><span class="check">✓</span> Vehicles & Fleet Delivery Routes</li>
-            <li><span class="check">✓</span> GSTR Export & WAC Costing</li>
-            <li><span class="check">✓</span> Max 10 Users • Unlimited Invoices</li>
-          </ul>
-          <a href="#" class="btn btn-primary" id="proCta">Start 30-Day Free Trial</a>
-        </div>
-
-        <!-- Pro (Replaces Enterprise) -->
-        <div class="pricing-card" id="planEnterprise">
-          <div class="plan-name">Pro</div>
-          <div class="price">₹<span class="price-val" data-monthly="1299" data-yearly="999">999</span><span class="price-period">/mo</span></div>
-          <div class="period">Billed annually</div>
-          <div class="trial-badge" style="background:#0f172a; color:white;">🏢 Best for Multi-Branch Teams</div>
-          <ul class="pricing-features">
-            <li><span class="check">✓</span> <strong>All Growth Features +</strong></li>
-            <li><span class="check">✓</span> User Role Permissions & Management</li>
-            <li><span class="check">✓</span> Team Security Settings</li>
-            <li><span class="check">✓</span> Immutable Enterprise Audit Log</li>
-            <li><span class="check">✓</span> Open API Access & White Labeling</li>
-            <li><span class="check">✓</span> Unlimited Users & Invoices</li>
-          </ul>
-          <a href="#" class="btn btn-secondary" id="enterpriseCta">Start 30-Day Free Trial</a>
-        </div>
-      </div>
-      
-      <!-- Detailed Feature Matrix -->
-      <div class="comparison-container">
-        <div class="comparison-title">
-          <h3>Compare complete capabilities</h3>
-          <p>Choose the configuration that aligns perfectly with your operational scale</p>
-        </div>
-        
-        <div class="comparison-table-wrapper">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th class="col-feature">Platform Feature</th>
-                <th>Starter</th>
-                <th class="col-popular">Growth</th>
-                <th>Pro</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="category-row"><td colspan="4">Core Workspaces</td></tr>
-              <tr>
-                <td>Dashboard</td>
-                <td><span class="check-icon">✓</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Inventory</td>
-                <td><span class="check-icon">✓</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Sales / POS</td>
-                <td><span class="check-icon">✓</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Clients</td>
-                <td><span class="check-icon">✓</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Expenses</td>
-                <td><span class="check-icon">✓</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Day Book</td>
-                <td><span class="check-icon">✓</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Invoices</td>
-                <td><span class="check-icon">✓</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-
-              <tr class="category-row"><td colspan="4">Supply & Logistics</td></tr>
-              <tr>
-                <td>Purchases</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Suppliers</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Vehicles / Routes</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Orders Pipeline</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-
-              <tr class="category-row"><td colspan="4">Intelligence, Compliance & Multi-Location</td></tr>
-              <tr>
-                <td>Multi-Location Inventory</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Reports</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Price Lists</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>WAC Costing</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>GSTR Export</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Payroll</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="check-icon">✓</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-
-              <tr class="category-row"><td colspan="4">Administration & Enterprise</td></tr>
-              <tr>
-                <td>User Management</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="cross-icon">✕</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Settings</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="cross-icon">✕</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>Audit Log</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="cross-icon">✕</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>API Access</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="cross-icon">✕</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-              <tr>
-                <td>White Label</td>
-                <td><span class="cross-icon">✕</span></td>
-                <td class="col-popular"><span class="cross-icon">✕</span></td>
-                <td><span class="check-icon">✓</span></td>
-              </tr>
-
-              <tr class="category-row"><td colspan="4">Volume Thresholds</td></tr>
-              <tr>
-                <td>Max Active Users</td>
-                <td>2 Users</td>
-                <td class="col-popular">10 Users</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Max Invoices / Month</td>
-                <td>500 / mo</td>
-                <td class="col-popular">Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div style="text-align:center; margin-top: 50px; color: var(--text-muted); font-size: 0.9rem;">
-        🔒 30-Day Money-Back Guarantee • 💳 Cancel Anytime • 💬 24/7 Human Support
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== TESTIMONIALS ========== -->
-  <section class="section" id="testimonials">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label">💬 Testimonials</div>
-        <h2 class="section-title">Loved by <span class="gradient-text">Businesses Worldwide</span></h2>
-        <p class="section-subtitle mx-auto">See why thousands of businesses trust LedgrPro to manage their inventory.</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card" id="testimonial1">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"LedgrPro replaced three different tools we were using. The real-time tracking alone saved us thousands in dead stock costs."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar"><img src="https://i.pravatar.cc/150?img=32" alt="Sarah Reynolds"></div>
-            <div class="testimonial-info">
-              <div class="name">Sarah Reynolds</div>
-              <div class="role">COO, NovaTech Industries</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card" id="testimonial2">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"The margin analytics are incredible. We identified underpriced products within the first week and boosted revenue by 18%."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar"><img src="https://i.pravatar.cc/150?img=11" alt="Marcus Kim"></div>
-            <div class="testimonial-info">
-              <div class="name">Marcus Kim</div>
-              <div class="role">Founder, UrbanGoods Co.</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card" id="testimonial3">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"Setup took 10 minutes. The CSV import just worked. I wish every SaaS tool was this easy to get started with."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar"><img src="https://i.pravatar.cc/150?img=5" alt="Jessica Liu"></div>
-            <div class="testimonial-info">
-              <div class="name">Jessica Liu</div>
-              <div class="role">Operations Manager, FreshBite</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FAQ SECTION ========== -->
-  <section class="section" id="faq" style="background: #fefefe; border-top: 1px solid var(--border);">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label">Got Questions?</div>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-      </div>
-      <div style="max-width: 800px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 20px;">
-        
-        <div style="background:white; border:1px solid var(--border); border-radius:12px; padding: 24px;">
-          <h4 style="margin-bottom:10px; color:var(--text); font-weight:700;">Can I migrate data from Tally?</h4>
-          <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6;">Yes. LedgrPro offers seamless Excel and CSV import protocols constructed specifically to map Tally exported ledgers, masters, and inventory lists effortlessly.</p>
-        </div>
-
-        <div style="background:white; border:1px solid var(--border); border-radius:12px; padding: 24px;">
-          <h4 style="margin-bottom:10px; color:var(--text); font-weight:700;">How does it handle GST Compliance?</h4>
-          <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6;">Built-in tax slabs automatically partition HSN/SAC-tagged items. We generate ready-to-file internal GST-reconciliation reports compatible with standard submission workflows.</p>
-        </div>
-
-        <div style="background:white; border:1px solid var(--border); border-radius:12px; padding: 24px;">
-          <h4 style="margin-bottom:10px; color:var(--text); font-weight:700;">What are the system requirements?</h4>
-          <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6;">LedgrPro runs smoothly in modern web browsers. All processing is lightning-fast and cloud-backed, meaning you can access the storefront from anywhere with active internet.</p>
-        </div>
-
-        <div style="background:white; border:1px solid var(--border); border-radius:12px; padding: 24px;">
-          <h4 style="margin-bottom:10px; color:var(--text); font-weight:700;">Is my business data secure?</h4>
-          <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6;">Your data is stored with enterprise-level AES-256 encryption and backed up daily. You can configure granular role-based permission grids guaranteeing employees only see what's strictly necessary.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CTA ========== -->
-  <section class="section" id="cta">
-    <div class="container">
-      <div class="cta-section" style="padding-top: 60px;">
-        <img src="logo.png" alt="LedgrPro Brand Icon" style="height: 60px; width: auto; margin: 0 auto 24px; display: block; opacity: 0.9; mix-blend-mode: multiply; filter: grayscale(0.2);">
-        <h2>Ready to Scale Your Operations With<br>Maximum <span class="text-highlight">Clarity?</span></h2>
-        <p>Join over 2,400 leading retail and B2B operations leveraging LedgrPro. Get set up in minutes.</p>
-        <div class="hero-actions" style="justify-content: center; margin-top: 32px;">
-          <a href="#" class="btn btn-primary btn-large">Start Free 30-Day Trial →</a>
-          <a href="#" class="btn btn-secondary btn-large" style="background: white;">Schedule Live Demo</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" style="display: inline-block; margin-bottom: 20px;">
-            <img src="logo.png" alt="LedgrPro Logo" style="height: 52px; mix-blend-mode: multiply; opacity: 0.9;">
-          </a>
-          <p>The modern inventory management platform built for businesses that want to grow smarter, not harder.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <a href="./features.html">Features</a>
-          <a href="./pricing.html">Pricing</a>
-          <a href="./integrations.html">Integrations</a>
-          <a href="./changelog.html">Changelog</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="./about.html">About</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./careers.html">Careers</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./terms.html">Terms of Service</a>
-          <a href="./security.html">Security</a>
-        </div>
-      </div>
-      <div class="footer-locations" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 30px;">
-        <div class="location">
-          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">India</h4>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Poyisha Rd<br>North Edappally<br>Ernakulam</p>
-        </div>
-        <div class="location">
-          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">London</h4>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">126 Richmond Road, Ilford<br>London, 1G1 1JU</p>
-        </div>
-        <div class="location">
-          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">Qatar</h4>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">Doha</p>
-        </div>
-        <div class="location">
-          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--text);">Canada</h4>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">5415 Cogswell St Halifax<br>B3J 0K8</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 LedgrPro. All rights reserved.</span>
-        <span>Built with ♥ for modern businesses</span>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-
-    // Intersection Observer for fade-in animations
-    const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.feature-card, .step, .pricing-card, .testimonial-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-      observer.observe(el);
-    });
-
-    // Animate stat numbers on hero
-    function animateNumber(el, target, suffix = '') {
-      let current = 0;
-      const increment = target / 60;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) { current = target; clearInterval(timer); }
-        if (target >= 1000) {
-          el.textContent = (current / 1000).toFixed(1) + 'K+';
-        } else {
-          el.textContent = Math.floor(current).toLocaleString() + suffix;
-        }
-      }, 25);
-    }
-
-    // Mobile menu toggle
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navLinks = document.getElementById('navLinks');
-    mobileToggle.addEventListener('click', () => {
-      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '100%';
-      navLinks.style.left = '0';
-      navLinks.style.right = '0';
-      navLinks.style.background = 'rgba(255,255,255,0.98)';
-      navLinks.style.padding = '20px';
-      navLinks.style.borderBottom = '1px solid var(--border)';
-    });
-
-    // Custom Cursor Glow
-    const cursorGlow = document.createElement('div');
-    cursorGlow.classList.add('cursor-glow');
-    document.body.appendChild(cursorGlow);
-    
-    document.addEventListener('mousemove', (e) => {
-      cursorGlow.style.left = e.clientX + 'px';
-      cursorGlow.style.top = e.clientY + 'px';
-    });
-
-    // ERP Tabs logic
-    const erpTabs = document.querySelectorAll('.erp-tab');
-    const erpPanes = document.querySelectorAll('.erp-pane');
-    
-    erpTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        erpTabs.forEach(t => t.classList.remove('active'));
-        erpPanes.forEach(p => p.classList.remove('active'));
-        
-        tab.classList.add('active');
-        const targetId = tab.getAttribute('data-target');
-        document.getElementById(targetId).classList.add('active');
-      });
-    });
-
-    // Sticky Scroll Showcase Logic
-    const scrollSteps = document.querySelectorAll('.scroll-step');
-    const stickyOverlays = document.querySelectorAll('.sticky-overlay');
-    const baseImages = document.querySelectorAll('.sticky-base-img');
-    
-    if (scrollSteps.length > 0) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Remove active from everything
-            scrollSteps.forEach(s => s.classList.remove('active'));
-            stickyOverlays.forEach(o => o.classList.remove('active'));
-            baseImages.forEach(i => i.classList.remove('active'));
-            
-            // Activate target step
-            entry.target.classList.add('active');
-            
-            const stepIndex = entry.target.getAttribute('data-step');
-            
-            // Activate overlays and images
-            const targetOverlay = document.getElementById('overlay-step-' + stepIndex);
-            const targetImage = document.getElementById('base-img-' + stepIndex);
-            
-            if(targetOverlay) targetOverlay.classList.add('active');
-            if(targetImage) targetImage.classList.add('active');
-          }
-        });
-      }, { rootMargin: '-40% 0px -40% 0px' });
-      
-      scrollSteps.forEach(step => observer.observe(step));
-    }
-    // Pricing Toggle Script
-    const billingToggle = document.getElementById('billingToggle');
-    const priceVals = document.querySelectorAll('.price-val');
-    const pricePeriods = document.querySelectorAll('.price-period');
-    const monthlyLabel = document.getElementById('monthlyLabel');
-    const yearlyLabel = document.getElementById('yearlyLabel');
-
-    if(billingToggle) {
-      billingToggle.addEventListener('change', function() {
-        const isYearly = this.checked;
-        
-        priceVals.forEach(val => {
-          const newVal = isYearly ? val.getAttribute('data-yearly') : val.getAttribute('data-monthly');
-          // Fade text effect
-          val.style.opacity = 0;
-          setTimeout(() => {
-            val.innerText = newVal;
-            val.style.opacity = 1;
-          }, 150);
-        });
-
-        // Polish: Update the "Billed monthly/annually" labels
-        const periodLabels = document.querySelectorAll('.period');
-        periodLabels.forEach(label => {
-          label.innerText = isYearly ? "Billed annually" : "Billed monthly";
-        });
-
-        if(isYearly) {
-          monthlyLabel.style.color = "var(--text-muted)";
-          monthlyLabel.style.fontWeight = "400";
-          yearlyLabel.style.color = "var(--text)";
-          yearlyLabel.style.fontWeight = "600";
-        } else {
-          monthlyLabel.style.color = "var(--text)";
-          monthlyLabel.style.fontWeight = "600";
-          yearlyLabel.style.color = "var(--text-muted)";
-          yearlyLabel.style.fontWeight = "400";
-        }
-      });
-      
-      // Ensure setup style transition
-      priceVals.forEach(v => v.style.transition = "opacity 0.15s ease");
-    }
-  </script>
-</body>
-</html>
+</body></html>

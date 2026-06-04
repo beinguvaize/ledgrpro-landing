@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LedgrPro — GST Billing & Inventory Software for Indian Businesses</title>
+  <meta name="description" content="Create GST invoices, track stock, recover dues, and export GSTR reports. Works offline. Free mobile app. Try free for 30 days — no credit card required.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(10px); }
+    .faq-q { width: 100%; background: none; border: none; color: var(--text); font-family: var(--font); font-size: 1.05rem; font-weight: 700; text-align: left; padding: 24px 28px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; transition: color 0.2s; }
+    .faq-q:hover { color: var(--primary-light); }
+    .faq-icon { font-size: 1.4rem; font-weight: 300; line-height: 1; flex-shrink: 0; transition: transform 0.3s; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; padding: 0 28px; }
+    .faq-item.open .faq-a { max-height: 200px; padding: 0 28px 24px; }
+  </style>
+  <!-- OG / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ledgrpro.com/">
+  <meta property="og:title" content="LedgrPro — GST Billing & Inventory Software for Indian Businesses">
+  <meta property="og:description" content="Create GST invoices, track stock, recover dues, and export GSTR reports. Works offline. Free mobile app. Try free for 30 days.">
+  <meta property="og:image" content="https://ledgrpro.com/og.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LedgrPro — GST Billing & Inventory Software">
+  <meta name="twitter:description" content="GST invoices, POS, inventory, van sales — one platform for Indian retailers & distributors.">
+  <meta name="twitter:image" content="https://ledgrpro.com/og.webp">
+  <!-- Analytics -->
+  <script defer data-domain="ledgrpro.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+
+  <!-- Background Overlays -->
+  <div class="bg-grid-overlay"></div>
+  <div class="glow-blob glow-blob-1"></div>
+  <div class="glow-blob glow-blob-2"></div>
+  <div class="glow-blob glow-blob-3"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-logo">
+        <img src="logo-white.png" alt="LedgrPro Logo" class="app-logo">
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#industries">Industries</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="https://app.ledgrpro.com/login" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text-muted); transition: var(--transition);" id="loginBtn">Log In</a>
+        <a href="#downloadModal" class="btn btn-primary download-trigger" data-platform="Web" id="trialBtn">Download App</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO (Premium SaaS Layout with Background 3D Visual) ========== -->
+  <section class="hero-centered" id="hero">
+    <!-- CSS-only premium aurora background -->
+    <div class="hero-aurora" aria-hidden="true">
+      <div class="aurora-blob aurora-blob-1"></div>
+      <div class="aurora-blob aurora-blob-2"></div>
+      <div class="aurora-blob aurora-blob-3"></div>
+      <div class="aurora-grid"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content text-center">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span> GST-Ready & Free Mobile App
+        </div>
+        <h1 class="hero-h1">GST Billing & Inventory Software <span class="text-highlight">for Indian retailers & distributors.</span></h1>
+        <p class="hero-sub mx-auto">GST invoices in seconds. Stock tracked automatically. Outstanding dues recovered via WhatsApp. GSTR exports your CA can use directly.</p>
+        
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="#downloadModal" class="btn btn-primary btn-large download-trigger" data-platform="Windows" style="gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.1zM10.95 1.95L24 0v11.55H10.95V1.95zM10.95 12.45H24v11.55l-13.05-1.95v-9.6z"/></svg>
+            Download for Windows (PC)
+          </a>
+          <a href="#downloadModal" class="btn btn-secondary btn-large download-trigger" data-platform="Android" style="gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3l1.816 3.146a.75.75 0 1 1-1.298.75l-1.84-3.188A10.457 10.457 0 0 1 12 16.5c-1.57 0-3.04-.347-4.364-.97l-1.812 3.137a.75.75 0 1 1-1.3-.75l1.825-3.16A10.423 10.423 0 0 1 1.606 10H22.39a10.42 10.42 0 0 1-4.867 5.3zM11 5c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1s1-.45 1-1zm5 0c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1s1-.45 1-1z"/></svg>
+            Download for Android (Mobile)
+          </a>
+        </div>
+      </div>
+
+      <!-- High-Fidelity Browser Window Mockup -->
+      <div class="browser-container">
+        <div class="browser-header">
+          <div class="browser-buttons">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
+          </div>
+          <div class="browser-url">app.ledgrpro.com/dashboard</div>
+          <div class="browser-actions-icons">
+            <span>⚡ Real-Time Multi-Device Sync Active</span>
+          </div>
+        </div>
+        <div class="browser-content">
+          <!-- Static fallback image (original hero screenshot or isometric 3D) -->
+          <img src="hero-screenshot.webp" alt="LedgrPro Dashboard Workspace" class="browser-image fallback-image">
+          
+          <!-- Interactive HTML/CSS/JS Screencast Loop -->
+          <div class="screencast-container" id="screencastLoop">
+            <!-- Background Dashboard Template -->
+            <div class="dash-bg-view">
+              <div class="dash-sidebar">
+                <div class="sidebar-logo">LedgrPro</div>
+                <div class="sidebar-item active">Dashboard</div>
+                <div class="sidebar-item">Invoices</div>
+                <div class="sidebar-item">Inventory</div>
+                <div class="sidebar-item">Customers</div>
+                <div class="sidebar-item">Reports</div>
+              </div>
+              <div class="dash-main">
+                <div class="dash-header">
+                  <span class="dash-title">Dashboard</span>
+                  <div class="dash-search">Search for invoices, inventory...</div>
+                </div>
+                <div class="dash-metrics">
+                  <div class="metric-card">
+                    <span class="metric-label">Total Revenue</span>
+                    <span class="metric-value" id="kpiRevenue">₹3,15,640.75</span>
+                    <span class="metric-trend green">↑ 15.2%</span>
+                  </div>
+                  <div class="metric-card">
+                    <span class="metric-label">GST Collected</span>
+                    <span class="metric-value">₹78,450.20</span>
+                    <span class="metric-trend green">GST-Ready</span>
+                  </div>
+                </div>
+                <div class="dash-chart-section">
+                  <div class="chart-header">
+                    <span class="chart-label">Monthly GST Overview</span>
+                    <span class="chart-legend"><span class="legend-dot green"></span> Revenue  <span class="legend-dot blue"></span> Projection</span>
+                  </div>
+                  <div class="chart-bars">
+                    <div class="chart-bar" style="height: 45%;"><span>Jan</span></div>
+                    <div class="chart-bar" style="height: 55%;"><span>Feb</span></div>
+                    <div class="chart-bar" style="height: 60%;"><span>Mar</span></div>
+                    <div class="chart-bar" style="height: 75%;"><span>Apr</span></div>
+                    <div class="chart-bar" style="height: 85%;"><span>May</span></div>
+                    <div class="chart-bar new-bar" id="animatedChartBar" style="height: 10%;"><span>Jun</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- POS Checkout Overlay Screen (Phase 1 & 2) -->
+            <div class="pos-overlay-view" id="posOverlay">
+              <div class="pos-header">
+                <span>Sales Counter POS Terminal</span>
+                <span class="pos-status">Online • Sync Active</span>
+              </div>
+              <div class="pos-grid">
+                <div class="pos-products">
+                  <div class="pos-search-mock" id="posSearchMock">Search products (e.g. Milk, Rice)...</div>
+                  <div class="product-grid-mock">
+                    <div class="prod-item-mock" id="prodItem1">
+                      <div class="prod-img-mock"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 16 8"/><path d="M17.47 4.06a4 4 0 0 1 4.47 4.47l-1.54 1.54a4 4 0 0 1-4.47-4.47z"/><path d="M11.5 6.5 17 12"/><path d="m6 18 3-3"/></svg></div>
+                      <span>Wheat Flour 5k</span>
+                      <strong>₹280.00</strong>
+                    </div>
+                    <div class="prod-item-mock" id="prodItem2">
+                      <div class="prod-img-mock"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l1 8H7z"/><path d="M7 10c0 6 2 10 5 10s5-4 5-10"/></svg></div>
+                      <span>Fresh Milk 1L</span>
+                      <strong>₹60.00</strong>
+                    </div>
+                    <div class="prod-item-mock" id="prodItem3">
+                      <div class="prod-img-mock"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                      <span>Hardware Kit</span>
+                      <strong>₹790.00</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="pos-cart">
+                  <div class="cart-title">Active Cart</div>
+                  <div class="cart-items-list" id="cartList">
+                    <!-- Dynamic items will slide in -->
+                  </div>
+                  <div class="cart-summary">
+                    <div class="summary-row"><span>Subtotal:</span><span id="cartSubtotal">₹0.00</span></div>
+                    <div class="summary-row"><span>GST (5%):</span><span id="cartTax">₹0.00</span></div>
+                    <div class="summary-row total"><span>Grand Total:</span><span id="cartTotal">₹0.00</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- UPI QR Code Modal (Phase 2) -->
+              <div class="qr-modal-overlay" id="qrModal">
+                <div class="qr-modal-card">
+                  <div class="qr-title">UPI QR Payment Gateway</div>
+                  <div class="qr-code-placeholder">
+                    <div class="qr-scanner-line"></div>
+                    <div class="qr-vector">
+                      <div class="qr-square qr-tl"></div>
+                      <div class="qr-square qr-tr"></div>
+                      <div class="qr-square qr-bl"></div>
+                      <div class="qr-dot-cluster"></div>
+                    </div>
+                  </div>
+                  <div class="qr-amount" id="qrAmount">₹1,250.00</div>
+                  <div class="qr-desc">Scan using GPay, PhonePe, or Paytm</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Phone Mockup Overlay (Phase 3) -->
+            <div class="mobile-phone-mockup" id="mobilePhone">
+              <div class="phone-screen">
+                <div class="phone-header">
+                  <span class="time">21:45</span>
+                  <span class="icons">● LTE &nbsp; 98%</span>
+                </div>
+                <div class="phone-app-content">
+                  <div class="upi-app-logo">Google Pay</div>
+                  <div class="payment-pending-view" id="phonePending">
+                    <div class="loading-spinner"></div>
+                    <h4>Paying LedgrPro Store</h4>
+                    <h2>₹1,250.00</h2>
+                    <p>Securing UPI channel...</p>
+                  </div>
+                  <div class="payment-success-view" id="phoneSuccess" style="display: none;">
+                    <div class="success-shield-icon">✓</div>
+                    <h4>Payment Successful</h4>
+                    <h2>₹1,250.00</h2>
+                    <p>Sent to LedgrPro Store</p>
+                    <span class="txn-id">UPI Ref: 69c719a9b72c</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Success Toast Notification (Phase 4) -->
+            <div class="toast-notification" id="toastNotify">
+              <div class="toast-icon">✓</div>
+              <div class="toast-text">
+                <strong>Payment Received (₹1,250.00)</strong>
+                <span>Ref: UPI69c719a9b72c • Invoice Auto-Generated</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST STRIP ========== -->
+  <section class="trust-strip">
+    <div class="container">
+      <p class="trust-label text-center">Trusted by 500+ shops, wholesalers & distributors across India.</p>
+      <div class="logo-strip-grid">
+        <div class="logo-item">Future Dispo Industries</div>
+        <div class="logo-item">Apex Distributors</div>
+        <div class="logo-item">Velo Logistics</div>
+        <div class="logo-item">Elite Paper Cup Co.</div>
+        <div class="logo-item">Nova Retail Group</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INDUSTRIES SECTION ========== -->
+  <section class="section" id="industries" style="background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 40px;">
+        <span class="section-label">Tailored Solutions</span>
+        <h2 class="section-title">Built for Your Business</h2>
+        <p class="section-subtitle mx-auto">No matter your trade, LedgrPro provides customized workflows to automate your operations.</p>
+      </div>
+
+      <div class="industry-tabs-container">
+        <div class="tabs-selector">
+          <button class="tab-btn active" data-tab="retail">Retail Shops</button>
+          <button class="tab-btn" data-tab="wholesale">Wholesale & Distributors</button>
+          <button class="tab-btn" data-tab="manufacture">Manufacturers</button>
+          <button class="tab-btn" data-tab="services">Services & Traders</button>
+        </div>
+
+        <div class="tab-content">
+          <!-- Retail -->
+          <div class="tab-pane active" id="retail">
+            <div class="tab-text">
+              <span class="tab-tag">Point of Sale</span>
+              <h3>Fast Billing & Queue-Resilient POS</h3>
+              <p>Keep your checkout counter running smoothly. Scan items instantly, process split payments (Cash/UPI/Card), and print thermal receipts. Works offline without missing a beat.</p>
+              <ul class="tab-features">
+                <li><span class="check">✓</span> Barcode scanning</li>
+                <li><span class="check">✓</span> Split payments</li>
+                <li><span class="check">✓</span> Offline billing cache</li>
+                <li><span class="check">✓</span> Thermal printer support</li>
+              </ul>
+            </div>
+            <div class="tab-visual-container">
+              <img src="3d-pos.webp" alt="Retail POS Screen" class="tab-img">
+            </div>
+          </div>
+
+          <!-- Wholesale -->
+          <div class="tab-pane" id="wholesale">
+            <div class="tab-text">
+              <span class="tab-tag">Credit Ledger</span>
+              <h3>Manage Outstanding Dues & Credits</h3>
+              <p>Reconcile accounts receivable and payable effortlessly. Generate aging reports for your clients, record supplier payments, and send direct WhatsApp reminders to recover credits faster.</p>
+              <ul class="tab-features">
+                <li><span class="check">✓</span> Customer credit ledgers</li>
+                <li><span class="check">✓</span> WhatsApp due alerts</li>
+                <li><span class="check">✓</span> Multi-location stock</li>
+                <li><span class="check">✓</span> CA-friendly GSTR file exports</li>
+              </ul>
+            </div>
+            <div class="tab-visual-container">
+              <img src="3d-logistics.webp" alt="Wholesale Operations" class="tab-img">
+            </div>
+          </div>
+
+          <!-- Manufacture -->
+          <div class="tab-pane" id="manufacture">
+            <div class="tab-text">
+              <span class="tab-tag">Production Recipe</span>
+              <h3>Bill of Materials & Waste Tracking</h3>
+              <p>Perfect for light manufacturers, paper-cup makers, and assemblers. Construct multi-level ingredient lists (BOM), auto-deduct raw materials upon order completion, and calculate yields.</p>
+              <ul class="tab-features">
+                <li><span class="check">✓</span> Multi-level BOM recipes</li>
+                <li><span class="check">✓</span> Auto stock reconciliations</li>
+                <li><span class="check">✓</span> Production daybooks</li>
+                <li><span class="check">✓</span> Material waste logging</li>
+              </ul>
+            </div>
+            <div class="tab-visual-container">
+              <img src="3d-admin.webp" alt="Manufacturing recipes" class="tab-img">
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="tab-pane" id="services">
+            <div class="tab-text">
+              <span class="tab-tag">Client Quoting</span>
+              <h3>Professional Estimates & Invoices</h3>
+              <p>Convert leads to sales in clicks. Send professional estimates, manage job work cards, track delivery challans, and share digital payment links to collect payments directly.</p>
+              <ul class="tab-features">
+                <li><span class="check">✓</span> Quotations & Estimates</li>
+                <li><span class="check">✓</span> Delivery Challans</li>
+                <li><span class="check">✓</span> Bank Account linkages</li>
+                <li><span class="check">✓</span> Expenses daybook log</li>
+              </ul>
+            </div>
+            <div class="tab-visual-container">
+              <img src="3d-finance.webp" alt="Services and Quotes" class="tab-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VALUE PROPS SECTION ========== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 60px;">
+        <span class="section-label">Core Value</span>
+        <h2 class="section-title">Built for Speed & Scale</h2>
+        <p class="section-subtitle mx-auto">Replaces clunky legacy systems and spreadsheets with a single intelligent screen.</p>
+      </div>
+
+      <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+        <!-- Feature 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+          <h3>GST Invoicing</h3>
+          <p>Create professional, customizable GST tax invoices. Print instantly or share directly via WhatsApp with clients.</p>
+          <ul class="pillar-features">
+            <li><span>✓</span> Dual CGST/SGST logs</li>
+            <li><span>✓</span> Professional templates</li>
+            <li><span>✓</span> Direct WhatsApp PDF</li>
+          </ul>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+          <h3>Inventory Alerts</h3>
+          <p>Track stock levels in real-time. Scan barcodes, organize items by batch, and get automatic warnings on low-stock.</p>
+          <ul class="pillar-features">
+            <li><span>✓</span> Low-stock alerts</li>
+            <li><span>✓</span> Barcode scanning</li>
+            <li><span>✓</span> Batch & WAC cost tracking</li>
+          </ul>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+          <h3>Dues & Receivables</h3>
+          <p>Maintain receivables and payables seamlessly. Track outstanding balances and share invoices to recover dues faster.</p>
+          <ul class="pillar-features">
+            <li><span>✓</span> Client credit aging books</li>
+            <li><span>✓</span> WhatsApp invoice sharing</li>
+            <li><span>✓</span> Client settlement & payments</li>
+          </ul>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg></div>
+          <h3>CA-Ready GST Filing</h3>
+          <p>Simplify tax filing. Export automated GSTR-1 and GSTR-3B audit spreadsheets directly from transactions.</p>
+          <ul class="pillar-features">
+            <li><span>✓</span> Auto-computed tax brackets</li>
+            <li><span>✓</span> Government-portal formats</li>
+            <li><span>✓</span> Zero-error GSTR reports</li>
+          </ul>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
+          <h3>Bank Linkage</h3>
+          <p>Track cashflow changes dynamically. Reconcile entries against bank statements and record custom business costs.</p>
+          <ul class="pillar-features">
+            <li><span>✓</span> Bank accounts ledger</li>
+            <li><span>✓</span> Cost group tracking</li>
+            <li><span>✓</span> Cash/UPI/Bank transfers</li>
+          </ul>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+          <h3>Hardware Compatibility</h3>
+          <p>Works seamlessly with standard billing hardware. Connect thermal rolls, A4/A5 laser prints, and barcode scanners.</p>
+          <ul class="pillar-features">
+            <li><span>✓</span> 2-inch & 3-inch thermal prints</li>
+            <li><span>✓</span> Laser/Inkjet formats</li>
+            <li><span>✓</span> Barcode scanner support</li>
+          </ul>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <h3>28 Business Reports</h3>
+          <p>Acquire a complete overview of your shop. Access automated P&L accounts, balance sheets, and stock books.</p>
+          <ul class="pillar-features">
+            <li><span>✓</span> Real-time P&L & Balance Sheet</li>
+            <li><span>✓</span> Daily sales daybooks</li>
+            <li><span>✓</span> Trial balance & general ledger</li>
+          </ul>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg></div>
+          <h3>Manufacturing & BOM</h3>
+          <p>Build multi-level recipes, run production orders, and auto-deduct raw materials with real-time costing on every build.</p>
+          <ul class="pillar-features">
+            <li><span>✓</span> Bill of Materials recipes</li>
+            <li><span>✓</span> Production orders & costing</li>
+            <li><span>✓</span> Auto raw-material deduction</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURE SHOWCASE (ALTERNATING SECTIONS) ========== -->
+  <section class="section" style="background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 80px;">
+        <span class="section-label">Deep Dive</span>
+        <h2 class="section-title">The Complete Operations Workspace</h2>
+        <p class="section-subtitle mx-auto">Unify your checkout counter, warehousing, fleet delivery, and production lines.</p>
+      </div>
+
+      <!-- Feature 1: POS with Cart & FIFO -->
+      <div class="showcase-row">
+        <div class="showcase-text">
+          <span class="showcase-badge">Counter Billing</span>
+          <h3>Sales POS with cart + FIFO costs</h3>
+          <p>Process transactions instantly using our queue-resilient POS. Features a simple cart interface with real-time stock verification. Integrated FIFO (First-In, First-Out) costing models calculate item margins automatically during checkout, letting you see profit metrics instantly.</p>
+          <ul class="showcase-features-list">
+            <li><span class="check">✓</span> High-speed cart checkout with barcode scanner support</li>
+            <li><span class="check">✓</span> FIFO cost calculation for accurate margin tracking</li>
+            <li><span class="check">✓</span> Split payments (Cash, Card, UPI) on a single invoice</li>
+          </ul>
+        </div>
+        <div class="showcase-image-container">
+          <img src="3d-pos.webp" alt="Sales POS Terminal Mockup" class="showcase-img">
+        </div>
+      </div>
+
+      <!-- Feature 2: Real-time reports -->
+      <div class="showcase-row reverse">
+        <div class="showcase-text">
+          <span class="showcase-badge">Intelligence</span>
+          <h3>Real-time reports & premium charts</h3>
+          <p>Get instant visibility into your shop's performance. Access 28 built-in operational reports detailing daily day books, sales velocity, low-stock thresholds, and aging customer credit. Gorgeous premium charts help you visualize gross margins and spot trends instantly.</p>
+          <ul class="showcase-features-list">
+            <li><span class="check">✓</span> 28 automated operations and tax reports</li>
+            <li><span class="check">✓</span> Interactive charts with filters for custom timeframes</li>
+            <li><span class="check">✓</span> Single-click CSV/Excel export for accountants</li>
+          </ul>
+        </div>
+        <div class="showcase-image-container">
+          <img src="3d-finance.webp" alt="Real-time Financial Reports Mockup" class="showcase-img">
+        </div>
+      </div>
+
+      <!-- Feature 3: Mobile driver app -->
+      <div class="showcase-row">
+        <div class="showcase-text">
+          <span class="showcase-badge">Logistics</span>
+          <h3>Mobile driver app with van sales + maps</h3>
+          <p>Coordinate field sales and deliveries seamlessly. The dedicated driver app allows your team to map delivery routes, reconcile van inventory, and execute spot-sales directly from their Android phones. Keeps tracking progress even when offline on remote routes.</p>
+          <ul class="showcase-features-list">
+            <li><span class="check">✓</span> Offline van invoicing and stock reconciliation</li>
+            <li><span class="check">✓</span> Map integrations for optimized delivery routes</li>
+            <li><span class="check">✓</span> Bluetooth thermal printer support for on-the-spot receipts</li>
+          </ul>
+        </div>
+        <div class="showcase-image-container">
+          <img src="3d-logistics.webp" alt="Mobile Driver App & Logistics Mockup" class="showcase-img">
+        </div>
+      </div>
+
+      <!-- Feature 4: Manufacturing recipes -->
+      <div class="showcase-row reverse">
+        <div class="showcase-text">
+          <span class="showcase-badge">Production</span>
+          <h3>Manufacturing recipes + production orders</h3>
+          <p>Perfect for light manufacturers, paper-cup makers, and recipe-based assembly lines. Build multi-stage Bill of Materials (BOM) recipes, track work-in-progress inventory across assembly lines, and auto-reconcile raw materials when production orders are finished.</p>
+          <ul class="showcase-features-list">
+            <li><span class="check">✓</span> Multi-level recipes (Bill of Materials)</li>
+            <li><span class="check">✓</span> Automatic raw material stock deduction</li>
+            <li><span class="check">✓</span> Waste tracking and yield analysis reports</li>
+          </ul>
+        </div>
+        <div class="showcase-image-container">
+          <img src="3d-admin.webp" alt="Manufacturing Recipes and Production Orders Mockup" class="showcase-img">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Simple Pricing</span>
+        <h2 class="section-title">Honest Plans. Built for Growth.</h2>
+        
+        <!-- Toggle -->
+        <div class="price-toggle-container" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+          <span id="monthlyLabel" style="color: var(--text-muted); font-weight: 400;">Monthly</span>
+          <label class="switch">
+            <input type="checkbox" id="billingToggle" checked>
+            <span class="slider round"></span>
+          </label>
+          <span id="yearlyLabel" style="font-weight: 600; color: var(--text);">Annually <span style="background: rgba(16,185,129,0.15); color: var(--accent-light); font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; font-weight: 700; margin-left: 5px; border: 1px solid rgba(16,185,129,0.25);">Save ~17%</span></span>
+        </div>
+
+        <p class="section-subtitle mx-auto" style="margin-top: 20px;">Start with a 30-day free trial — no credit card required.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter Tier -->
+        <div class="pricing-card" id="planStarter">
+          <div class="plan-name">Starter</div>
+          <div class="price">₹<span class="price-val" data-monthly="499" data-yearly="415">415</span><span class="price-period">/mo</span></div>
+          <div class="period">Billed annually</div>
+          <div class="trial-badge">Perfect for single retail shops</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Dashboard & Inventory</li>
+            <li><span class="check">✓</span> Sales / POS Counter</li>
+            <li><span class="check">✓</span> Clients & Expenses</li>
+            <li><span class="check">✓</span> Day Book & GST Invoices</li>
+            <li><span class="check">✓</span> 2 Users • 500 Invoices/mo</li>
+          </ul>
+          <a href="https://app.ledgrpro.com/signup" class="btn btn-secondary" id="starterCta">Start Free Trial</a>
+        </div>
+
+        <!-- Professional Tier -->
+        <div class="pricing-card popular" id="planProfessional">
+          <div class="plan-name">Professional</div>
+          <div class="price">₹<span class="price-val" data-monthly="1499" data-yearly="1249">1249</span><span class="price-period">/mo</span></div>
+          <div class="period">Billed annually</div>
+          <div class="trial-badge">Top Choice: Wholesalers & GST</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> <strong>All Starter Features +</strong></li>
+            <li><span class="check">✓</span> Purchases & Supplier Ledger</li>
+            <li><span class="check">✓</span> Vehicles & Van Sales</li>
+            <li><span class="check">✓</span> Orders, Payroll & 28 Reports</li>
+            <li><span class="check">✓</span> Price Lists, WAC Costing & GSTR Export</li>
+            <li><span class="check">✓</span> 10 Users • Unlimited Invoices</li>
+          </ul>
+          <a href="https://app.ledgrpro.com/signup" class="btn btn-primary" id="professionalCta">Start Free Trial</a>
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div class="pricing-card" id="planEnterprise">
+          <div class="plan-name">Enterprise</div>
+          <div class="price">₹<span class="price-val" data-monthly="3499" data-yearly="2915">2915</span><span class="price-period">/mo</span></div>
+          <div class="period">Billed annually</div>
+          <div class="trial-badge">Best for Multi-Branch Teams</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> <strong>All Professional Features +</strong></li>
+            <li><span class="check">✓</span> <strong>Multi-Location Inventory</strong></li>
+            <li><span class="check">✓</span> User Roles & Audit Log</li>
+            <li><span class="check">✓</span> API Access & White-Label</li>
+            <li><span class="check">✓</span> Unlimited Users & Invoices</li>
+          </ul>
+          <a href="https://app.ledgrpro.com/signup" class="btn btn-secondary" id="enterpriseCta">Start Free Trial</a>
+        </div>
+      </div>
+      
+      <!-- Detailed Feature Matrix -->
+      <div class="comparison-container">
+        <div class="comparison-title">
+          <h3>Compare Complete Capabilities</h3>
+          <p>Choose the configuration that aligns perfectly with your operational scale</p>
+        </div>
+        
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th class="col-feature">Platform Feature</th>
+                <th>Starter</th>
+                <th class="col-popular">Professional</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="category-row"><td colspan="4">Core Billing & POS</td></tr>
+              <tr>
+                <td>POS Counter Billing</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>WhatsApp PDF Invoices</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>WAC Cost Margins</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Invoices / month</td>
+                <td>500</td>
+                <td class="col-popular">Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+
+              <tr class="category-row"><td colspan="4">Compliance & Reports</td></tr>
+              <tr>
+                <td>Day Book & GST Invoices</td>
+                <td><span class="check-icon">✓</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>GSTR-1 & 3B Export</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Business Reports</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular">28 Reports + Charts</td>
+                <td>28 Reports + Charts</td>
+              </tr>
+
+              <tr class="category-row"><td colspan="4">Operations & Advanced</td></tr>
+              <tr>
+                <td>Purchases & Suppliers</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Van Sales & Fleet</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Orders, Payroll & Manufacturing (BOM)</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>Multi-Location Inventory</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="cross-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>User Roles & Audit Log</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="cross-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td>API Access & White-Label</td>
+                <td><span class="cross-icon">✕</span></td>
+                <td class="col-popular"><span class="cross-icon">✕</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section" id="testimonials" style="background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Success Stories</span>
+        <h2 class="section-title">Loved by High-Performance Teams</h2>
+        <p class="section-subtitle mx-auto">See how merchants are modernizing their daily store calculations using LedgrPro.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"LedgrPro completely changed how our delivery fleets operate. The offline POS and van sales sync is incredible."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><img src="https://i.pravatar.cc/150?img=32" alt="Aarav Mehta"></div>
+            <div class="testimonial-info">
+              <div class="name">Aarav Mehta</div>
+              <div class="role">Owner, Future Dispo Industries</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"We migrated from Tally in hours. The live FIFO margin tracker and automatic GSTR exports saved us countless hours of manual CA checking."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><img src="https://i.pravatar.cc/150?img=11" alt="Priya Nair"></div>
+            <div class="testimonial-info">
+              <div class="name">Priya Nair</div>
+              <div class="role">CFO, Apex Distributors</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Excellent offline POS terminal. When our store Wi-Fi goes down, checkouts continue without missing a single beat."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><img src="https://i.pravatar.cc/150?img=5" alt="Rohan Joshi"></div>
+            <div class="testimonial-info">
+              <div class="name">Rohan Joshi</div>
+              <div class="role">Founder, Elite Retailers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ SECTION ========== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 50px;">
+        <span class="section-label">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px;" id="faqAccordion">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How secure is my business data? <span class="faq-icon">+</span></button>
+          <div class="faq-a">All business entries are encrypted using industry-standard AES-256 protocols. Your operational data is backed up continuously to resilient cloud hubs, ensuring no data loss ever.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can I export my reports and invoices? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes. You can export complete day books, client credit ledgers, stock lists, and all 28 analytical reports into clean Excel or CSV spreadsheets at any time.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is LedgrPro GST-ready? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Absolutely. Set tax percentages at item creation, and LedgrPro handles CGST, SGST, and IGST tagging on every transaction. Export file spreadsheets align perfectly with active government tax filing setups.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Does the POS terminal work offline? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes. The billing checkout runs directly within local browser caches. You can continue scanning products and issuing receipts without an active internet connection; all transactions sync once connection re-establishes.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What happens after the 30-day free trial? <span class="faq-icon">+</span></button>
+          <div class="faq-a">No credit card is required to try LedgrPro. After your 30-day free trial, you can choose to subscribe to either the Starter, Growth, or Pro plan — or cancel anytime with no penalties or lock-ins.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="section" id="cta" style="background: var(--bg-alt); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="cta-section">
+        <img src="logo.svg" alt="LedgrPro Brand Icon" style="height: 52px; width: auto; margin: 0 auto 24px; display: block; filter: brightness(0) invert(1); opacity: 0.8;">
+        <h2>Ready to Run Your Shop end-to-end?</h2>
+        <p>Join thousands of leading wholesalers and retailers using LedgrPro. Launch your free 30-day trial today — no credit card required.</p>
+        <div class="hero-actions" style="justify-content: center; margin-top: 32px; position: relative;">
+          <a href="#pricing" class="btn btn-primary btn-large">Start Free Trial →</a>
+          <a href="#contact" class="btn btn-secondary btn-large">Request Custom Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" style="display: inline-block; margin-bottom: 20px;">
+            <img src="logo.svg" alt="LedgrPro Logo" style="height: 44px; filter: brightness(0) invert(1); opacity: 0.85;">
+          </a>
+          <p>The modern operations and ledger platform built for businesses that want to grow smarter, not harder.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="./integrations.html">Integrations</a>
+          <a href="./changelog.html">Changelog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support & Company</h4>
+          <a href="./about.html">About Us</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./careers.html">Careers</a>
+          <a href="./contact.html">Contact Support</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./security.html">Security Protocol</a>
+        </div>
+      </div>
+
+      <div class="footer-locations" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 30px;">
+        <div class="location">
+          <h4 style="font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; color: rgba(255,255,255,0.45);">India</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.65;">Poyisha Rd<br>North Edappally<br>Ernakulam</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; color: rgba(255,255,255,0.45);">London</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.65;">126 Richmond Road, Ilford<br>London, 1G1 1JU</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; color: rgba(255,255,255,0.45);">Qatar</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.65;">Doha</p>
+        </div>
+        <div class="location">
+          <h4 style="font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; color: rgba(255,255,255,0.45);">Canada</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.65;">5415 Cogswell St Halifax<br>B3J 0K8</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 LedgrPro. All rights reserved.</span>
+        <span>Built for high-performance commerce</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== DOWNLOAD LEAD MODAL ========== -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="modal-card">
+      <span class="modal-close" id="modalCloseBtn">&times;</span>
+      <div id="modalFormContent">
+        <h3>Start Your Download</h3>
+        <p>Enter your details below. We will send the installer and a setup guide straight to your WhatsApp / SMS.</p>
+        <form class="modal-form" id="leadCaptureForm" onsubmit="handleLeadSubmit(event)">
+          <input type="hidden" id="selectedPlatform" name="platform" value="Web">
+          <div class="form-group">
+            <label for="leadName" style="display: block; font-size: 12px; font-weight: 500; margin-bottom: 6px; color: var(--text-muted);">Your Name</label>
+            <input type="text" id="leadName" required placeholder="e.g. Aarav Mehta" style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: rgba(255, 255, 255, 0.02); color: var(--text); font-family: inherit; font-size: 13.5px; transition: var(--transition);">
+          </div>
+          <div class="form-group">
+            <label for="leadPhone" style="display: block; font-size: 12px; font-weight: 500; margin-bottom: 6px; color: var(--text-muted);">Phone Number (WhatsApp preferred)</label>
+            <input type="tel" id="leadPhone" required pattern="^[6-9]\d{9}$" placeholder="10-digit mobile number" style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: rgba(255, 255, 255, 0.02); color: var(--text); font-family: inherit; font-size: 13.5px; transition: var(--transition);">
+          </div>
+          <div class="form-group">
+            <label for="leadBusiness" style="display: block; font-size: 12px; font-weight: 500; margin-bottom: 6px; color: var(--text-muted);">Business Type</label>
+            <select id="leadBusiness" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: rgba(255, 255, 255, 0.02); color: var(--text); font-family: inherit; font-size: 13.5px; transition: var(--transition);">
+              <option value="" disabled selected>Select your trade</option>
+              <option value="retail">Retail Shop</option>
+              <option value="wholesale">Wholesaler / Distributor</option>
+              <option value="manufacture">Manufacturer</option>
+              <option value="services">Services / Trader</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Get Download Link →</button>
+        </form>
+      </div>
+      <div class="success-message" id="modalSuccessContent">
+        <div class="success-icon">✓</div>
+        <h4>Link Sent Successfully!</h4>
+        <p>We've sent the setup link for your <strong id="successPlatform">Windows</strong> app via WhatsApp / SMS. Please check your phone to install.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MOBILE DOWNLOAD STRIP ========== -->
+  <div class="mobile-download-strip">
+    <div class="strip-info">
+      <img src="logo.svg" alt="LedgrPro App Icon" class="strip-logo" style="filter: brightness(0) invert(1);">
+      <div class="strip-text">
+        <span class="strip-title">LedgrPro Mobile</span>
+        <span class="strip-desc">Free Billing & POS App</span>
+      </div>
+    </div>
+    <a href="#downloadModal" class="strip-btn download-trigger" data-platform="Android">Install Free</a>
+  </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // Navbar scroll background solidify
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href !== "#") {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+      if (navLinks.classList.contains('mobile-active')) {
+        navLinks.classList.remove('mobile-active');
+      } else {
+        navLinks.classList.add('mobile-active');
+      }
+    });
+
+    // Pricing Billing toggle
+    const billingToggle = document.getElementById('billingToggle');
+    const priceVals = document.querySelectorAll('.price-val');
+    const monthlyLabel = document.getElementById('monthlyLabel');
+    const yearlyLabel = document.getElementById('yearlyLabel');
+
+    if (billingToggle) {
+      billingToggle.addEventListener('change', function() {
+        const isYearly = this.checked;
+        
+        priceVals.forEach(val => {
+          const newVal = isYearly ? val.getAttribute('data-yearly') : val.getAttribute('data-monthly');
+          val.style.opacity = 0;
+          setTimeout(() => {
+            val.innerText = newVal;
+            val.style.opacity = 1;
+          }, 150);
+        });
+
+        const periodLabels = document.querySelectorAll('.period');
+        periodLabels.forEach(label => {
+          if (true) {
+            label.innerText = isYearly ? "Billed annually" : "Billed monthly";
+          }
+        });
+
+        if (isYearly) {
+          monthlyLabel.style.color = "var(--text-muted)";
+          monthlyLabel.style.fontWeight = "400";
+          yearlyLabel.style.color = "var(--text)";
+          yearlyLabel.style.fontWeight = "600";
+        } else {
+          monthlyLabel.style.color = "var(--text)";
+          monthlyLabel.style.fontWeight = "600";
+          yearlyLabel.style.color = "var(--text-muted)";
+          yearlyLabel.style.fontWeight = "400";
+        }
+      });
+      priceVals.forEach(v => v.style.transition = "opacity 0.15s ease");
+    }
+
+    // Scroll Fade-in Intersection Observer
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.pillar-card, .showcase-row, .pricing-card, .testimonial-card').forEach(el => {
+      el.classList.add('fade-in-init');
+      fadeObserver.observe(el);
+    });
+
+    // Industry Tab Switching Logic
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons and panes
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabPanes.forEach(p => p.classList.remove('active'));
+
+        // Add active class to clicked button and matching pane
+        btn.classList.add('active');
+        const targetTab = btn.getAttribute('data-tab');
+        const activePane = document.getElementById(targetTab);
+        if (activePane) {
+          activePane.classList.add('active');
+        }
+      });
+    });
+
+    // Lead Modal triggers
+    const downloadModal = document.getElementById('downloadModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const selectedPlatformInput = document.getElementById('selectedPlatform');
+    const leadFormContent = document.getElementById('modalFormContent');
+    const leadSuccessContent = document.getElementById('modalSuccessContent');
+    const successPlatformSpan = document.getElementById('successPlatform');
+    const leadCaptureForm = document.getElementById('leadCaptureForm');
+
+    function setupModalTriggers() {
+      document.querySelectorAll('.download-trigger').forEach(trigger => {
+        // Remove old listeners if any by cloning or just checking to avoid duplicates
+        const newTrigger = trigger.cloneNode(true);
+        trigger.parentNode.replaceChild(newTrigger, trigger);
+        
+        newTrigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          const platform = newTrigger.getAttribute('data-platform') || 'Web';
+          selectedPlatformInput.value = platform;
+          
+          // Reset form and views
+          leadCaptureForm.reset();
+          leadFormContent.style.display = 'block';
+          leadSuccessContent.style.display = 'none';
+
+          // Open modal
+          downloadModal.classList.add('active');
+        });
+      });
+    }
+    setupModalTriggers();
+
+    modalCloseBtn.addEventListener('click', () => {
+      downloadModal.classList.remove('active');
+    });
+
+    // Close modal when clicking outside card
+    downloadModal.addEventListener('click', (e) => {
+      if (e.target === downloadModal) {
+        downloadModal.classList.remove('active');
+      }
+    });
+
+    // Handle form submit
+    function handleLeadSubmit(e) {
+      e.preventDefault();
+      const platform = selectedPlatformInput.value;
+      successPlatformSpan.textContent = platform;
+
+      // Hide form, show success message
+      leadFormContent.style.display = 'none';
+      leadSuccessContent.style.display = 'block';
+
+      // Auto close modal after 4 seconds
+      setTimeout(() => {
+        downloadModal.classList.remove('active');
+      }, 4000);
+    }
+
+    // Animated Screencast Loop Logic
+    const screencastContainer = document.getElementById('screencastLoop');
+    const browserContainer = document.querySelector('.browser-container');
+    const kpiRevenue = document.getElementById('kpiRevenue');
+    const animatedChartBar = document.getElementById('animatedChartBar');
+    const cartList = document.getElementById('cartList');
+    const cartSubtotal = document.getElementById('cartSubtotal');
+    const cartTax = document.getElementById('cartTax');
+    const cartTotal = document.getElementById('cartTotal');
+    const posOverlay = document.getElementById('posOverlay');
+    const qrModal = document.getElementById('qrModal');
+    const mobilePhone = document.getElementById('mobilePhone');
+    const phonePending = document.getElementById('phonePending');
+    const phoneSuccess = document.getElementById('phoneSuccess');
+    const toastNotify = document.getElementById('toastNotify');
+    const posSearchMock = document.getElementById('posSearchMock');
+    const prodItem1 = document.getElementById('prodItem1');
+    const prodItem2 = document.getElementById('prodItem2');
+    const prodItem3 = document.getElementById('prodItem3');
+
+    let screencastInterval = null;
+    let isScreencastPlaying = false;
+    let screencastTimeouts = [];
+
+    function clearScreencastTimeouts() {
+      screencastTimeouts.forEach(t => clearTimeout(t));
+      screencastTimeouts = [];
+    }
+
+    function addTimeout(fn, ms) {
+      screencastTimeouts.push(setTimeout(fn, ms));
+    }
+
+    function runScreencastCycle() {
+      // State 0: Reset UI State
+      posOverlay.classList.add('active');
+      posOverlay.style.opacity = '1';
+      qrModal.classList.remove('active');
+      mobilePhone.classList.remove('active');
+      phonePending.style.display = 'block';
+      phoneSuccess.style.display = 'none';
+      toastNotify.classList.remove('active');
+      cartList.innerHTML = '';
+      cartSubtotal.innerText = '₹0.00';
+      cartTax.innerText = '₹0.00';
+      cartTotal.innerText = '₹0.00';
+      posSearchMock.innerText = 'Search products...';
+      prodItem1.classList.remove('selected');
+      prodItem2.classList.remove('selected');
+      prodItem3.classList.remove('selected');
+      animatedChartBar.style.height = '10%';
+      kpiRevenue.innerText = '₹3,15,640.75';
+
+      // Phase 1: Ring sale
+      // Add item 1
+      addTimeout(() => {
+        posSearchMock.innerText = 'Typing: "Wheat"...';
+        prodItem1.classList.add('selected');
+      }, 500);
+
+      addTimeout(() => {
+        const item = document.createElement('div');
+        item.className = 'cart-item-mock fade-in';
+        item.innerHTML = '<span>Wheat Flour 5kg</span><strong>₹280.00</strong>';
+        cartList.appendChild(item);
+        cartSubtotal.innerText = '₹280.00';
+        cartTax.innerText = '₹14.00';
+        cartTotal.innerText = '₹294.00';
+        posSearchMock.innerText = 'Search products...';
+        prodItem1.classList.remove('selected');
+      }, 1200);
+
+      // Add item 2
+      addTimeout(() => {
+        posSearchMock.innerText = 'Typing: "Milk"...';
+        prodItem2.classList.add('selected');
+      }, 1800);
+
+      addTimeout(() => {
+        const item = document.createElement('div');
+        item.className = 'cart-item-mock fade-in';
+        item.innerHTML = '<span>Fresh Milk 1L x 2</span><strong>₹120.00</strong>';
+        cartList.appendChild(item);
+        cartSubtotal.innerText = '₹400.00';
+        cartTax.innerText = '₹20.00';
+        cartTotal.innerText = '₹420.00';
+        posSearchMock.innerText = 'Search products...';
+        prodItem2.classList.remove('selected');
+      }, 2500);
+
+      // Add item 3
+      addTimeout(() => {
+        posSearchMock.innerText = 'Typing: "Hardw"...';
+        prodItem3.classList.add('selected');
+      }, 3100);
+
+      addTimeout(() => {
+        const item = document.createElement('div');
+        item.className = 'cart-item-mock fade-in';
+        item.innerHTML = '<span>Hardware Kit</span><strong>₹790.00</strong>';
+        cartList.appendChild(item);
+        cartSubtotal.innerText = '₹1,190.00';
+        cartTax.innerText = '₹59.50';
+        cartTotal.innerText = '₹1,249.50';
+        posSearchMock.innerText = 'Checkout in progress...';
+        prodItem3.classList.remove('selected');
+      }, 3800);
+
+      // Phase 2: QR modal pops up
+      addTimeout(() => {
+        qrModal.classList.add('active');
+      }, 4500);
+
+      // Phase 3: Mobile Phone slides in and pays
+      addTimeout(() => {
+        mobilePhone.classList.add('active');
+      }, 5500);
+
+      addTimeout(() => {
+        phonePending.style.display = 'none';
+        phoneSuccess.style.display = 'flex';
+      }, 6800);
+
+      // Phase 4: Mobile phone and POS transition out, dashboard ticks up
+      addTimeout(() => {
+        mobilePhone.classList.remove('active');
+        qrModal.classList.remove('active');
+        posOverlay.style.opacity = '0';
+      }, 8200);
+
+      addTimeout(() => {
+        posOverlay.classList.remove('active');
+        // Count up Revenue
+        let currentRev = 315640.75;
+        const targetRev = 316890.25;
+        const steps = 15;
+        const diff = (targetRev - currentRev) / steps;
+        let stepCount = 0;
+        
+        const counterInterval = setInterval(() => {
+          currentRev += diff;
+          kpiRevenue.innerText = '₹' + currentRev.toLocaleString('en-IN', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+          stepCount++;
+          if (stepCount >= steps) {
+            clearInterval(counterInterval);
+            kpiRevenue.innerText = '₹3,16,890.25';
+          }
+        }, 30);
+
+        animatedChartBar.style.height = '85%';
+        toastNotify.classList.add('active');
+      }, 8700);
+
+      // Slide out toast
+      addTimeout(() => {
+        toastNotify.classList.remove('active');
+      }, 11200);
+    }
+
+    function startScreencast() {
+      if (isScreencastPlaying) return;
+      isScreencastPlaying = true;
+      browserContainer.classList.add('screencast-active');
+      runScreencastCycle();
+      screencastInterval = setInterval(runScreencastCycle, 13000);
+    }
+
+    function stopScreencast() {
+      if (!isScreencastPlaying) return;
+      isScreencastPlaying = false;
+      clearInterval(screencastInterval);
+      clearScreencastTimeouts();
+      browserContainer.classList.remove('screencast-active');
+    }
+
+    // IntersectionObserver to pause loop on scroll
+    const screencastObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startScreencast();
+        } else {
+          stopScreencast();
+        }
+      });
+    }, { threshold: 0.1 });
+
+    if (browserContainer) {
+      screencastObserver.observe(browserContainer);
+    }
+  </script>
+
+  <!-- FAQ Accordion -->
+  <script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
+  <!-- FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"How secure is my business data?","acceptedAnswer":{"@type":"Answer","text":"All business entries are encrypted using industry-standard AES-256 protocols. Your operational data is backed up continuously to resilient cloud hubs, ensuring no data loss ever."}},
+      {"@type":"Question","name":"Can I export my reports and invoices?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can export complete day books, client credit ledgers, stock lists, and all 28 analytical reports into clean Excel or CSV spreadsheets at any time."}},
+      {"@type":"Question","name":"Is LedgrPro GST-ready?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Set tax percentages at item creation, and LedgrPro handles CGST, SGST, and IGST tagging on every transaction. Export file spreadsheets align perfectly with active government tax filing setups."}},
+      {"@type":"Question","name":"Does the POS terminal work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. The billing checkout runs directly within local browser caches. You can continue scanning products and issuing receipts without an active internet connection; all transactions sync once connection re-establishes."}},
+      {"@type":"Question","name":"What happens after the 30-day free trial?","acceptedAnswer":{"@type":"Answer","text":"No credit card is required to try LedgrPro. After your 30-day free trial, you can choose to subscribe to either the Starter, Growth, or Pro plan — or cancel anytime with no penalties or lock-ins."}}
+    ]
+  }
+  </script>
+</body>
+</html>
