@@ -58,11 +58,35 @@
           <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Voids &amp; returns</li>
         </ul>
       </div>
-      <div class="bg-surface flex items-center justify-center p-8"><img src="3d-finance.webp" alt="Billing" class="max-h-56 object-contain"/></div>
+      <div class="bg-surface flex items-center justify-center p-8 lg:p-12">
+        <div class="w-full max-w-sm rounded-xl bg-canvas border border-line shadow-lg overflow-hidden">
+          <div class="px-4 py-3 border-b border-line flex justify-between items-center"><span class="text-xs font-semibold">Tax Invoice</span><span class="mono text-[10px] text-secondary">INV/2026/0231</span></div>
+          <div class="p-4 space-y-2 text-sm">
+            <div class="flex justify-between"><span>Paper Cup 250ml ×40</span><span class="mono">₹4,800</span></div>
+            <div class="flex justify-between"><span>Food Container ×20</span><span class="mono">₹1,300</span></div>
+            <div class="flex justify-between text-secondary text-xs"><span>GST (incl)</span><span class="mono">₹931</span></div>
+            <div class="flex justify-between border-t border-line pt-2 font-bold"><span>Total</span><span class="mono"><span class="text-accent/60">₹</span>6,100</span></div>
+          </div>
+          <div class="px-4 pb-4 flex justify-end"><span class="text-[10px] font-bold uppercase text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Paid · UPI</span></div>
+        </div>
+      </div>
     </div>
 
     <div class="bg-canvas grid lg:grid-cols-2">
-      <div class="bg-surface flex items-center justify-center p-8 order-last lg:order-first"><img src="3d-pos.webp" alt="POS" class="max-h-56 object-contain"/></div>
+      <div class="bg-surface flex items-center justify-center p-8 lg:p-12 order-last lg:order-first">
+        <div class="w-full max-w-sm rounded-xl bg-canvas border border-line shadow-lg overflow-hidden">
+          <div class="px-4 py-3 bg-primary text-white flex justify-between items-center"><span class="text-xs font-semibold">Cart · 3 items</span><span class="text-[10px] text-accent">⏸ Hold</span></div>
+          <div class="divide-y divide-line text-sm">
+            <div class="flex justify-between px-4 py-2.5"><span>Paper Cup 210ml ×8</span><span class="mono font-semibold">₹360</span></div>
+            <div class="flex justify-between px-4 py-2.5"><span>HM Cover 1" ×3</span><span class="mono font-semibold">₹390</span></div>
+          </div>
+          <div class="px-4 py-3 border-t border-line space-y-1">
+            <div class="flex justify-between text-xs text-secondary"><span>Discount</span><span class="mono text-rose-500">−₹50</span></div>
+            <div class="flex justify-between font-bold"><span>Total</span><span class="mono"><span class="text-accent/60">₹</span>700</span></div>
+          </div>
+          <div class="p-3"><div class="w-full py-2.5 rounded-lg bg-accent text-white text-sm font-bold text-center">Checkout · ₹700</div></div>
+        </div>
+      </div>
       <div class="p-8 lg:p-12">
         <span class="material-symbols-outlined text-accent" style="font-size:26px">point_of_sale</span>
         <h2 class="mt-4 text-2xl font-light tracking-tight">Offline POS</h2>
@@ -88,11 +112,30 @@
           <li class="flex gap-2"><span class="material-symbols-outlined text-accent" style="font-size:16px">check</span> Stock adjust &amp; history</li>
         </ul>
       </div>
-      <div class="bg-surface flex items-center justify-center p-8"><img src="3d-inventory.webp" alt="Inventory" class="max-h-56 object-contain"/></div>
+      <div class="bg-surface flex items-center justify-center p-8 lg:p-12">
+        <div class="w-full max-w-sm rounded-xl bg-canvas border border-line shadow-lg p-4">
+          <div class="text-xs font-semibold mb-3">Stock health</div>
+          <div class="space-y-3 text-sm">
+            <div><div class="flex justify-between mb-1"><span>Paper Cup 250ml</span><span class="mono font-bold">4,200</span></div><div class="h-1.5 rounded-full bg-line overflow-hidden"><div class="h-full rounded-full bg-emerald-500" style="width:84%"></div></div></div>
+            <div><div class="flex justify-between mb-1"><span>Paper Plate 7"</span><span class="mono font-bold text-amber-700">180 · Low</span></div><div class="h-1.5 rounded-full bg-line overflow-hidden"><div class="h-full rounded-full bg-amber-500" style="width:18%"></div></div></div>
+            <div><div class="flex justify-between mb-1"><span>Straw Box Large</span><span class="mono font-bold text-rose-600">12 · Reorder</span></div><div class="h-1.5 rounded-full bg-line overflow-hidden"><div class="h-full rounded-full bg-rose-500" style="width:6%"></div></div></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="bg-canvas grid lg:grid-cols-2">
-      <div class="bg-surface flex items-center justify-center p-8 order-last lg:order-first"><img src="3d-logistics.webp" alt="Van sales" class="max-h-56 object-contain"/></div>
+      <div class="bg-surface flex items-center justify-center p-8 lg:p-12 order-last lg:order-first">
+        <div class="w-full max-w-sm rounded-xl bg-canvas border border-line shadow-lg overflow-hidden">
+          <div class="px-4 py-3 border-b border-line flex justify-between items-center"><span class="text-xs font-semibold">Route · KL-07 AB 1234</span><span class="text-[10px] font-bold uppercase text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">On trip</span></div>
+          <div class="divide-y divide-line text-sm">
+            <div class="flex items-center justify-between px-4 py-2.5"><span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>Aisha Store</span><span class="mono text-secondary text-xs">delivered</span></div>
+            <div class="flex items-center justify-between px-4 py-2.5"><span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span>Banu Transport</span><span class="mono text-secondary text-xs">next</span></div>
+            <div class="flex items-center justify-between px-4 py-2.5"><span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-line"></span>City Mart</span><span class="mono text-secondary text-xs">pending</span></div>
+          </div>
+          <div class="px-4 py-3 border-t border-line flex justify-between text-xs"><span class="text-secondary">Van load</span><span class="mono font-bold">1,240 / 2,000 units</span></div>
+        </div>
+      </div>
       <div class="p-8 lg:p-12">
         <span class="material-symbols-outlined text-accent" style="font-size:26px">local_shipping</span>
         <h2 class="mt-4 text-2xl font-light tracking-tight">Van Sales &amp; Routes</h2>
