@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   <!-- Analytics -->
-  <script defer data-domain="ledgrpro.com" src="https://plausible.io/js/script.js"></script>
+  <script defer data-domain="ledgrpro.co" src="https://plausible.io/js/script.js"></script>
 </head>
 <body class="subpage-body">
 
@@ -22,12 +22,12 @@
       </a>
       <div class="navbar-links" id="navLinks">
         <a href="./index.html#features">Features</a>
-        <a href="./index.html#industries">Industries</a>
+        <a href="./index.html#features">Industries</a>
         <a href="./index.html#pricing">Pricing</a>
       </div>
       <div class="navbar-actions">
-        <a href="#" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text-muted); transition: var(--transition);" id="loginBtn">Log In</a>
-        <a href="./index.html#downloadModal" class="btn btn-primary" id="trialBtn">Download App</a>
+        <a href="https://app.ledgrpro.co/login" style="font-size:0.9rem; font-weight:600; margin-right:15px; color:var(--text-muted); transition: var(--transition);" id="loginBtn">Log In</a>
+        <a href="register.html" class="btn btn-primary" id="trialBtn">Download App</a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">☰</button>
       </div>
     </div>
@@ -43,66 +43,27 @@
     </div>
   </section>
 
-  <!-- ========== JOBS SECTION ========== -->
+  <!-- ========== GENERAL APPLICATION ========== -->
   <section class="section">
     <div class="container">
-      <div style="max-width: 900px; margin: 0 auto;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px;">
-          <h2 style="font-weight: 800; font-size: 1.8rem;">Open Roles <span style="font-size: 1rem; font-weight: 600; color: var(--text-muted); margin-left: 8px;">(Hiring Soon)</span></h2>
+      <div style="max-width: 620px; margin: 0 auto;">
+        <div style="text-align:center; margin-bottom: 32px;">
+          <h2 style="font-weight: 800; font-size: 1.8rem;">Tell us about you</h2>
+          <p style="color: var(--text-muted); margin-top: 10px; line-height:1.6;">No open postings right now — but we’re always glad to meet talented people. Send your resume and we’ll reach out when there’s a fit.</p>
         </div>
 
-        <!-- Job 1 -->
-        <div class="job-card">
-          <div class="job-info">
-            <h3>Full Stack Developer (React + Supabase)</h3>
-            <div class="job-tags">
-              <span class="job-tag-badge">⚡ Engineering</span>
-              <span class="job-tag-badge">📍 Remote</span>
-              <span class="job-tag-badge">💼 Full-Time</span>
-            </div>
+        <form id="jobForm" style="background:#fff; border:1px solid var(--border); border-radius:18px; padding:28px; display:flex; flex-direction:column; gap:16px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <div><label style="font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted);">Full name</label><input name="name" required style="margin-top:6px; width:100%; padding:11px 14px; border:1px solid var(--border); border-radius:11px; font-size:.9rem;"/></div>
+            <div><label style="font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted);">Phone</label><input name="phone" style="margin-top:6px; width:100%; padding:11px 14px; border:1px solid var(--border); border-radius:11px; font-size:.9rem;"/></div>
           </div>
-          <a href="./contact.html?ref=dev-fs" class="btn btn-secondary">Apply Now</a>
-        </div>
-
-        <!-- Job 2 -->
-        <div class="job-card">
-          <div class="job-info">
-            <h3>GST & Accounting Domain Expert</h3>
-            <div class="job-tags">
-              <span class="job-tag-badge">📊 Finance</span>
-              <span class="job-tag-badge">📍 Remote (India)</span>
-              <span class="job-tag-badge">💼 Part-Time / Contract</span>
-            </div>
-          </div>
-          <a href="./contact.html?ref=gst-expert" class="btn btn-secondary">Apply Now</a>
-        </div>
-
-        <!-- Job 3 -->
-        <div class="job-card">
-          <div class="job-info">
-            <h3>Customer Success Specialist (India Market)</h3>
-            <div class="job-tags">
-              <span class="job-tag-badge">💬 Success</span>
-              <span class="job-tag-badge">📍 Hybrid (Remote / Ernakulam)</span>
-              <span class="job-tag-badge">💼 Full-Time</span>
-            </div>
-          </div>
-          <a href="./contact.html?ref=cs-india" class="btn btn-secondary">Apply Now</a>
-        </div>
-
-        <!-- Job 4 -->
-        <div class="job-card">
-          <div class="job-info">
-            <h3>Growth / Content Marketing Lead</h3>
-            <div class="job-tags">
-              <span class="job-tag-badge">📈 Growth</span>
-              <span class="job-tag-badge">📍 Remote</span>
-              <span class="job-tag-badge">💼 Full-Time</span>
-            </div>
-          </div>
-          <a href="./contact.html?ref=growth-mktg" class="btn btn-secondary">Apply Now</a>
-        </div>
-
+          <div><label style="font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted);">Email</label><input name="email" type="email" required style="margin-top:6px; width:100%; padding:11px 14px; border:1px solid var(--border); border-radius:11px; font-size:.9rem;"/></div>
+          <div><label style="font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted);">Role you're interested in</label><input name="role" placeholder="e.g. Developer, Sales, Support…" style="margin-top:6px; width:100%; padding:11px 14px; border:1px solid var(--border); border-radius:11px; font-size:.9rem;"/></div>
+          <div><label style="font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted);">Resume (PDF / DOC, max 5 MB)</label><input name="resume" type="file" accept=".pdf,.doc,.docx" required style="margin-top:6px; width:100%; font-size:.85rem;"/></div>
+          <div><label style="font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted);">A few words (optional)</label><textarea name="note" rows="3" style="margin-top:6px; width:100%; padding:11px 14px; border:1px solid var(--border); border-radius:11px; font-size:.9rem; resize:none;"></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Submit application</button>
+          <p id="jobNote" style="text-align:center; font-size:.8rem; color:var(--text-muted);"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -174,6 +135,44 @@
         navLinks.classList.remove('mobile-active');
       } else {
         navLinks.classList.add('mobile-active');
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SB_URL  = 'https://lmviftlynuhopzmvaxeu.supabase.co';
+    const SB_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxtdmlmdGx5bnVob3B6bXZheGV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzMDUxMzEsImV4cCI6MjA4ODg4MTEzMX0.DX0HpM6jEYZrRx8Nl8mZxvTjvvMIY2AneJgnkS-e1xA';
+    const sb = window.supabase.createClient(SB_URL, SB_ANON);
+    const jf = document.getElementById('jobForm'); const jn = document.getElementById('jobNote');
+    jf.addEventListener('submit', async function(e){
+      e.preventDefault();
+      const f = new FormData(jf);
+      const file = f.get('resume');
+      const btn = jf.querySelector('button[type=submit]');
+      jn.style.color = 'var(--text-muted)'; jn.textContent = '';
+      if (file && file.size > 5 * 1024 * 1024) { jn.style.color = '#dc2626'; jn.textContent = 'Resume too large (max 5 MB).'; return; }
+      btn.disabled = true; const orig = btn.textContent; btn.textContent = 'Submitting…';
+      try {
+        let resumeUrl = null;
+        if (file && file.name) {
+          const ext = file.name.split('.').pop();
+          const path = `${Date.now()}-${Math.random().toString(36).slice(2,8)}.${ext}`;
+          const up = await sb.storage.from('resumes').upload(path, file, { upsert: false });
+          if (up.error) throw up.error;
+          resumeUrl = sb.storage.from('resumes').getPublicUrl(path).data.publicUrl;
+        }
+        const { error } = await sb.from('job_applications').insert({
+          name: (f.get('name')||'').trim(), email: (f.get('email')||'').trim(),
+          phone: (f.get('phone')||'').trim(), role: (f.get('role')||'').trim(),
+          resume_url: resumeUrl, note: (f.get('note')||'').trim(),
+        });
+        if (error) throw error;
+        jf.reset();
+        jn.style.color = '#059669'; jn.textContent = 'Thanks! Application received — we’ll be in touch.';
+        btn.textContent = 'Submitted ✓';
+      } catch (err) {
+        jn.style.color = '#dc2626'; jn.textContent = 'Could not submit — email careers@ledgrpro.co';
+        btn.disabled = false; btn.textContent = orig;
       }
     });
   </script>
